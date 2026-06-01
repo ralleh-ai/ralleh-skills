@@ -32,5 +32,6 @@ Agent files are bootstrap-critical. Keep them dense, stable, and optimized. Move
 ## Role templates
 
 - [`finance`](finance/README.md) — golden baseline for a finance operations agent.
+- [`sales`](sales/README.md) — golden baseline for a sales operations and enablement agent.
 
 Role folders use lowercase names and contain their own `SOUL.md`, `IDENTITY.md`, `AGENTS.md`, `SKILLS.md`, `TOOLS.md`, `DOCTOR.md`, `guidelines.md`, `workflows.md`, and `examples/`.

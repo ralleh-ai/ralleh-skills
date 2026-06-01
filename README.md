@@ -10,6 +10,7 @@ Each skill is a self-contained Markdown guide that an agent can read from a repo
 - [`skills/README.md`](skills/README.md) — skill library map by family.
 - [`agents/README.md`](agents/README.md) — golden standards for agent Markdown files.
 - [`agents/finance/README.md`](agents/finance/README.md) — golden baseline Finance role agent template.
+- [`agents/sales/README.md`](agents/sales/README.md) — golden baseline Sales role agent template.
 
 ## Organization
 

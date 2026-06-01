@@ -20,6 +20,7 @@ The goal is simple: give every Ralleh-managed bot the instincts of a senior oper
 - [`pages/onboarding/README.md`](pages/onboarding/README.md) — first instructions a bot should read when entering a Ralleh-managed environment.
 - [`skills/README.md`](skills/README.md) — complete skill map by family.
 - [`agents/README.md`](agents/README.md) — standards for agent Markdown files and role-agent templates.
+- [`mcp/README.md`](mcp/README.md) — Ralleh MCP service family overview, runtime map, and safety boundaries.
 - [`docs/GOLDEN_CONTENT_STANDARD.md`](docs/GOLDEN_CONTENT_STANDARD.md) — what belongs in this public golden repo.
 - [`docs/NAMING_STANDARD.md`](docs/NAMING_STANDARD.md) — folder and file naming rules.
 
@@ -33,6 +34,7 @@ ralleh-skills/
 │   └── onboarding/         # default bot onboarding sequence
 ├── skills/                 # golden reusable skills by capability family
 ├── agents/                 # agent file standards and role-agent templates
+├── mcp/                    # Ralleh MCP service family overview
 ├── docs/                   # governance, naming, and quality standards
 └── scripts/                # repo validation and quality gates
 ```
@@ -221,13 +223,17 @@ A bot should be able to read those files and evaluate whether its own agent file
 
 ---
 
-## Ralleh MCP skills
+## Ralleh MCP
 
-The newest service family is Ralleh MCP: a VPS-local Go MCP runtime for enterprise-grade shopping and travel research.
+Ralleh MCP has a dedicated root index: [`mcp/README.md`](mcp/README.md). Start there when a bot needs the service-family overview, runtime map, source model, safety boundaries, and routing guidance.
+
+The skill files remain in their capability families so bots can load only the exact workflow they need:
 
 - [`RallehMcp`](skills/Infrastructure/RallehMcp/README.md) teaches bots how to install, upgrade, back up, health-check, and operate the runtime locally on a VPS.
 - [`RallehMcpShop`](skills/Commerce/RallehMcpShop/README.md) teaches curated product search, source collections, affiliate-safe URLs, and no-purchase boundaries.
 - [`RallehMcpTravel`](skills/Travel/RallehMcpTravel/README.md) teaches flight/travel research, fare warnings, source readiness, and no-booking boundaries.
+- [`RallehMcpSearch`](skills/Knowledge/RallehMcpSearch/README.md) teaches curated content/news/research lookup, source ranking, consensus, and conflict detection.
+- [`RallehMcpBrand`](skills/Marketing/RallehMcpBrand/README.md) teaches brand memory, voice, validation, campaign learning, and governance.
 
 Ralleh MCP rules are strict:
 

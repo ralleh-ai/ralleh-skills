@@ -10,7 +10,7 @@ const isFile = (p) => exists(p) && fs.statSync(path.join(root, p)).isFile();
 const pascal = /^[A-Z][A-Za-z0-9]*$/;
 const kebab = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const companion = new Set(['README.md', 'INSTALL.md', 'DOCTOR.md', 'PROMPTS.md']);
-const allowedRootDirs = new Set(['.git', 'agents', 'docs', 'pages', 'scripts', 'skills']);
+const allowedRootDirs = new Set(['.git', 'agents', 'docs', 'mcp', 'pages', 'scripts', 'skills']);
 const forbiddenDirs = new Set(['bundle', 'bundles', 'template', 'templates', 'tmp', 'temp', 'scratch', 'drafts', 'archive']);
 const forbiddenFilePatterns = [
   /(^|\/)TODO\.md$/i,
@@ -33,7 +33,7 @@ for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
   if (entry.isDirectory() && !allowedRootDirs.has(entry.name)) errors.push(`unsupported root folder: ${entry.name}`);
 }
 
-for (const required of ['README.md', 'docs/NAMING_STANDARD.md', 'docs/GOLDEN_CONTENT_STANDARD.md', 'skills/README.md']) {
+for (const required of ['README.md', 'docs/NAMING_STANDARD.md', 'docs/GOLDEN_CONTENT_STANDARD.md', 'mcp/README.md', 'skills/README.md']) {
   if (!isFile(required)) errors.push(`missing required file: ${required}`);
 }
 

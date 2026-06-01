@@ -22,6 +22,8 @@ agents/
 docs/
   NAMING_STANDARD.md
   GOLDEN_CONTENT_STANDARD.md
+mcp/
+  README.md
 pages/
   <page-slug>/
     README.md
@@ -40,7 +42,7 @@ scripts/
 
 ## Folder names
 
-- Root management folders are lowercase: `agents`, `docs`, `pages`, `scripts`, `skills`.
+- Root management folders are lowercase: `agents`, `docs`, `mcp`, `pages`, `scripts`, `skills`.
 - Page folders use lowercase kebab-case: `onboarding`, `new-agent`, `memory-stack`.
 - Skill family folders use PascalCase: `Foundation`, `Engineering`, `Memory`, `Operations`.
 - Skill folders use PascalCase with no spaces, underscores, or hyphens: `Engram`, `RecallWorkflow`, `GitRepoDiscipline`.

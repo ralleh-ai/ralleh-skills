@@ -163,8 +163,11 @@ This public repo contains golden reusable instructions. Customer-specific hosts,
 ### Productivity
 
 - [`GoogleSheets`](skills/Productivity/GoogleSheets/README.md) — safe spreadsheet reads, reports, and approved updates.
+- [`GoogleDrive`](skills/Productivity/GoogleDrive/README.md) — Google Drive file inspection, sharing review, and approved operations.
 - [`Gog`](skills/Productivity/Gog/README.md) — Google Workspace CLI workflows.
 - [`Office365Connector`](skills/Productivity/Office365Connector/README.md) — Microsoft 365 connector workflows.
+- [`OneDrive`](skills/Productivity/OneDrive/README.md) — OneDrive and Microsoft Graph file workflows.
+- [`Dropbox`](skills/Productivity/Dropbox/README.md) — Dropbox file inspection, sharing review, and approved operations.
 - [`CalendarScheduler`](skills/Productivity/CalendarScheduler/README.md) — provider-agnostic scheduling and event drafting.
 
 ### Security

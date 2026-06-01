@@ -12,6 +12,7 @@ Ralleh skills are organized by capability family. Each skill is a Markdown runbo
 - [`Observability`](Observability/) — cost, context, health, and usage diagnostics.
 - [`Platforms`](Platforms/) — GitHub, Figma, and platform integrations.
 - [`Marketing`](Marketing/) — ads, analytics, and social marketing workflows.
+- [`Finance`](Finance/) — bookkeeping, expenses, reports, payments.
 - [`Security`](Security/) — prompt, secret, and trust-boundary defenses.
 - [`Visualization`](Visualization/) — diagrams, architecture maps, visual artifacts.
 - [`Voice`](Voice/) — voice, phone, STT, streams, and TTS.

@@ -24,6 +24,17 @@ Use this page when onboarding a bot into a Ralleh-managed environment. It is an 
 9. [`Tool Installation Support Pattern`](../../skills/Operations/ToolInstallationSupportPattern/README.md)
 10. [`Troubleshooting Runbook`](../../skills/Operations/TroubleshootingRunbook/README.md)
 
+## Conditional finance skills
+
+Read these when the bot will handle bookkeeping, expenses, reports, or payments:
+
+- [`Bookkeeper`](../../skills/Finance/Bookkeeper/README.md) — bookkeeping review, categorization, and handoffs.
+- [`Expense Tracker`](../../skills/Finance/ExpenseTracker/README.md) — expense capture, receipts, and summaries.
+- [`Financial Reporter`](../../skills/Finance/FinancialReporter/README.md) — financial reports and variance summaries.
+- [`Stripe`](../../skills/Finance/Stripe/README.md) — Stripe payments, subscriptions, invoices, payouts, and webhooks.
+
+Use each skill's `INSTALL.md`, `DOCTOR.md`, and `PROMPTS.md` only when installing, troubleshooting, or teaching that specific workflow.
+
 ## Conditional platform skills
 
 Read these when the bot will work with source control, design tools, ads, analytics, or social platforms:

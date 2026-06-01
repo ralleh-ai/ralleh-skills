@@ -24,6 +24,7 @@ skills/
   Observability/<Skill>/     # cost, context, health, and usage diagnostics
   Platforms/<Skill>/         # GitHub, Figma, and platform integrations
   Marketing/<Skill>/         # ads, analytics, and social marketing workflows
+  Finance/<Skill>/           # bookkeeping, expenses, reports, payments
   Security/<Skill>/          # prompt, secret, and trust-boundary defenses
   Visualization/<Skill>/     # diagrams, architecture maps, visual artifacts
   Voice/<Skill>/             # voice, phone, STT, streams, and TTS
@@ -50,6 +51,10 @@ Naming and golden-content rules are enforced by [`docs/NAMING_STANDARD.md`](docs
 - [Google Ads Skill](skills/Marketing/GoogleAds/README.md) — read-first ad campaign reporting and change planning.
 - [Google Analytics Skill](skills/Marketing/GoogleAnalytics/README.md) — GA4 reporting and instrumentation checks.
 - [LinkedIn Manager Skill](skills/Marketing/LinkedInManager/README.md) — LinkedIn drafts, reviews, and approved publishing workflows.
+- [Bookkeeper Skill](skills/Finance/Bookkeeper/README.md) — source-backed bookkeeping review and handoffs.
+- [Expense Tracker Skill](skills/Finance/ExpenseTracker/README.md) — expense capture, evidence matching, and spend summaries.
+- [Financial Reporter Skill](skills/Finance/FinancialReporter/README.md) — management-ready financial reports from approved sources.
+- [Stripe Skill](skills/Finance/Stripe/README.md) — safe Stripe payments, subscriptions, payouts, and webhook workflows.
 - [Talk Voice Skill](skills/Voice/TalkVoice/README.md) — safe conversational voice interaction.
 - [Phone Control Skill](skills/Voice/PhoneControl/README.md) — permission-first paired phone/device control.
 - [Voice Stream Skill](skills/Voice/VoiceStream/README.md) — realtime voice stream lifecycle and guardrails.

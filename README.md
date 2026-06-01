@@ -23,6 +23,8 @@ skills/
   Agents/<Skill>/            # agent file standards and audits
   Communication/<Skill>/     # agent/session/user communication patterns
   Engineering/<Skill>/       # git, implementation, verification
+  Infrastructure/<Skill>/    # VPS, networking, web serving, backups, runtime
+  Data/<Skill>/              # databases, vector stores, caches
   Automation/<Skill>/        # browser and controlled external-system workflows
   Observability/<Skill>/     # cost, context, health, and usage diagnostics
   Platforms/<Skill>/         # GitHub, Figma, and platform integrations

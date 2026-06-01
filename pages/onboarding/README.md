@@ -58,6 +58,24 @@ Read these when the bot will work with source control, design tools, ads, analyt
 
 Use each skill's `INSTALL.md`, `DOCTOR.md`, and `PROMPTS.md` only when installing, troubleshooting, or teaching that specific workflow.
 
+## Conditional VPS provisioning skills
+
+Read these when the bot will provision, verify, or troubleshoot managed VPS software:
+
+- [`Caddy`](../../skills/Infrastructure/Caddy/README.md) — web server, HTTPS, reverse proxy, headers, logs, HTTP/3.
+- [`Tailscale`](../../skills/Infrastructure/Tailscale/README.md) — private tailnet access, tags, auth-key planning, node checks.
+- [`Docker`](../../skills/Infrastructure/Docker/README.md) — Docker Engine/Compose operations.
+- [`Restic`](../../skills/Infrastructure/Restic/README.md) — backups, restores, snapshots, retention.
+- [`Go Runtime`](../../skills/Infrastructure/GoRuntime/README.md) — Go build/test/provisioner runtime.
+- [`Hostinger VPS`](../../skills/Infrastructure/HostingerVps/README.md) — Hostinger VPS/DNS discovery and verification.
+- [`SQLite`](../../skills/Data/SQLite/README.md) — local SQLite DB safety and integrity.
+- [`Postgres`](../../skills/Data/Postgres/README.md) — PostgreSQL service, backups, migrations.
+- [`pgvector`](../../skills/Data/Pgvector/README.md) — Postgres vector extension.
+- [`Redis`](../../skills/Data/Redis/README.md) — cache/queue/local sidecar diagnostics.
+- [`Qdrant`](../../skills/Data/Qdrant/README.md) — vector DB health and collections.
+
+Use each skill's `INSTALL.md`, `DOCTOR.md`, and `PROMPTS.md` only when installing, troubleshooting, or teaching that specific workflow.
+
 ## Conditional agent-file standards
 
 Read this when the bot will create, audit, or optimize agent Markdown files:

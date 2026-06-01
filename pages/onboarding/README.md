@@ -24,6 +24,15 @@ Use this page when onboarding a bot into a Ralleh-managed environment. It is an 
 9. [`Tool Installation Support Pattern`](../../skills/Operations/ToolInstallationSupportPattern/README.md)
 10. [`Troubleshooting Runbook`](../../skills/Operations/TroubleshootingRunbook/README.md)
 
+## Conditional task-management skill
+
+Read this when the bot will manage substantial work, subagents, blockers, or project status:
+
+- [`CORTEX Task Management`](../../skills/TaskManagement/Cortex/README.md) — overview of the operational task ledger.
+- [`CORTEX Install`](../../skills/TaskManagement/Cortex/INSTALL.md) — when installing/configuring CORTEX.
+- [`CORTEX Doctor`](../../skills/TaskManagement/Cortex/DOCTOR.md) — when CORTEX is broken or uncertain.
+- [`CORTEX Prompts`](../../skills/TaskManagement/Cortex/PROMPTS.md) — when teaching a user how to interact with task workflows.
+
 ## Conditional ENGRAM companions
 
 Only read these when relevant:

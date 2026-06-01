@@ -18,6 +18,7 @@ skills/
   Foundation/<Skill>/        # operating rules, navigation, safety
   Engineering/<Skill>/       # git, implementation, verification
   Memory/<Skill>/            # ENGRAM and recall workflows
+  TaskManagement/<Skill>/    # CORTEX and operational task ledgers
   Operations/<Skill>/        # handoffs, installation support, troubleshooting
 templates/                   # authoring templates
 ```
@@ -27,6 +28,7 @@ Naming and golden-content rules are enforced by [`docs/NAMING_STANDARD.md`](docs
 ## Canonical skill examples
 
 - [ENGRAM Memory Skill](skills/Memory/Engram/README.md) — durable semantic memory service and CLI for bots.
+- [CORTEX Task Management Skill](skills/TaskManagement/Cortex/README.md) — durable operational task ledger for bots.
 
 ## How agents should use this repo
 

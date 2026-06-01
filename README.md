@@ -202,9 +202,9 @@ This public repo contains golden reusable instructions. Customer-specific hosts,
 
 Ralleh Skills also defines golden role-agent baselines. These are not personalities for fun; they are operational templates for department-grade AI workers.
 
-- [`agents/finance/README.md`](agents/finance/README.md) — Finance agent: close, reporting, expenses, controls, Stripe, and financial hygiene.
-- [`agents/sales/README.md`](agents/sales/README.md) — Sales agent: lead qualification, pipeline hygiene, discovery, outreach, and proposal follow-up.
-- [`agents/it/README.md`](agents/it/README.md) — IT agent: full-stack software, networking, hosting, data, architecture, observability, security, backups, and incident response.
+- [`agents/finance/README.md`](agents/finance/README.md) — Finance agent: close, reporting, expenses, controls, Stripe, and financial hygiene. Its README links the complete role package, including every finance subfile and example.
+- [`agents/sales/README.md`](agents/sales/README.md) — Sales agent: lead qualification, pipeline hygiene, discovery, outreach, and proposal follow-up. Its README links the complete role package, including every sales subfile and example.
+- [`agents/it/README.md`](agents/it/README.md) — IT agent: full-stack software, networking, hosting, data, architecture, observability, security, backups, and incident response. Its README links the complete role package, including every IT subfile and example.
 
 Agent definition standards live here:
 

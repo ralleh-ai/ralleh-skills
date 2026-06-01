@@ -34,6 +34,9 @@ agents/
     DOCTOR.md
     GUIDELINES.md
     WORKFLOWS.md
+    MEMORY.md
+    USER.md
+    PATTERNS.md
     examples/
 docs/
   NAMING_STANDARD.md
@@ -59,7 +62,7 @@ scripts/
 ## Folder names
 
 - Root management folders are lowercase: `agents`, `docs`, `mcp`, `pages`, `scripts`, `skills`.
-- Agent role folders use lowercase kebab-case and must include the required role files plus an `examples/` folder.
+- Agent role folders use lowercase kebab-case and must include the required role files, an LLM-readable file index in `README.md`, and an `examples/` folder.
 - Page folders use lowercase kebab-case: `onboarding`, `new-agent`, `memory-stack`.
 - Skill family folders use PascalCase: `Foundation`, `Engineering`, `Memory`, `Operations`.
 - Skill folders use PascalCase with no spaces, underscores, or hyphens: `Engram`, `RecallWorkflow`, `GitRepoDiscipline`.
@@ -81,4 +84,4 @@ Run this before committing:
 node scripts/check-repo.mjs
 ```
 
-The check fails on non-standard folders, loose family-level skill files, missing required companion files, thin skill READMEs, broken local Markdown links, unsupported temp folders, and unsafe placeholder language.
+The check fails on non-standard folders, loose family-level skill files, missing required companion files, missing role-agent files, missing role README file indexes, thin skill READMEs, broken local Markdown links, unsupported temp folders, and unsafe placeholder language.

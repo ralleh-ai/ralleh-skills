@@ -35,12 +35,55 @@ agents/it/
   DOCTOR.md
   GUIDELINES.md
   WORKFLOWS.md
+  MEMORY.md
+  USER.md
+  PATTERNS.md
   examples/
-    incident-response.md
     architecture-review.md
-    deployment-hardening.md
     data-migration.md
+    deployment-hardening.md
+    incident-response.md
 ```
+
+## LLM-readable file index
+
+Load this index when an LLM needs the complete role-agent package. Each local link is intentionally explicit so crawlers and retrieval tools can discover every subfile.
+
+### Core operating files
+
+- [`README.md`](README.md) — role overview, routing, skill map, and first-run checklist.
+- [`SOUL.md`](SOUL.md) — identity, tone, operating principles, boundaries, and continuity.
+- [`IDENTITY.md`](IDENTITY.md) — mission, responsibilities, stakeholders, success measures, and escalation.
+- [`AGENTS.md`](AGENTS.md) — startup checks, delegation, handoffs, task ledger, verification, and memory curation.
+- [`SKILLS.md`](SKILLS.md) — approved skills and skill-loading rules.
+- [`TOOLS.md`](TOOLS.md) — tooling principles, local paths, commands, integrations, safe workflows, and gotchas.
+- [`DOCTOR.md`](DOCTOR.md) — health checks, failure diagnosis, unsafe states, and recovery verification.
+- [`GUIDELINES.md`](GUIDELINES.md) — source-of-truth rules, quality bar, safety boundaries, and review checklist.
+- [`WORKFLOWS.md`](WORKFLOWS.md) — repeatable workflows, inputs, steps, outputs, verification, and escalation.
+- [`MEMORY.md`](MEMORY.md) — curated durable lessons and what not to store.
+- [`USER.md`](USER.md) — stable user/business preference standard for deployed overlays.
+- [`PATTERNS.md`](PATTERNS.md) — cross-workflow patterns that may be promoted to shared patterns.
+
+### Examples
+
+- [`examples/architecture-review.md`](examples/architecture-review.md) — sample architecture review packet/output shape.
+- [`examples/data-migration.md`](examples/data-migration.md) — sample data migration packet/output shape.
+- [`examples/deployment-hardening.md`](examples/deployment-hardening.md) — sample deployment hardening packet/output shape.
+- [`examples/incident-response.md`](examples/incident-response.md) — sample incident response packet/output shape.
+
+### Related standards
+
+- [`../Definitions/SOUL.md`](../Definitions/SOUL.md)
+- [`../Definitions/IDENTITY.md`](../Definitions/IDENTITY.md)
+- [`../Definitions/AGENTS.md`](../Definitions/AGENTS.md)
+- [`../Definitions/SKILLS.md`](../Definitions/SKILLS.md)
+- [`../Definitions/TOOLS.md`](../Definitions/TOOLS.md)
+- [`../Definitions/DOCTOR.md`](../Definitions/DOCTOR.md)
+- [`../Definitions/GUIDELINES.md`](../Definitions/GUIDELINES.md)
+- [`../Definitions/WORKFLOWS.md`](../Definitions/WORKFLOWS.md)
+- [`../Definitions/MEMORY.md`](../Definitions/MEMORY.md)
+- [`../Definitions/USER.md`](../Definitions/USER.md)
+- [`../Definitions/PATTERNS.md`](../Definitions/PATTERNS.md)
 
 ## Baseline skill/tool set
 
@@ -84,7 +127,7 @@ Deployment-specific overlays should define approved cloud, hosting, DNS, databas
 ## First-run checklist
 
 1. Read this `README.md`.
-2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, and `WORKFLOWS.md`.
+2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, `WORKFLOWS.md`, `MEMORY.md`, `USER.md`, and `PATTERNS.md`.
 3. Confirm environment: repo, host, OS, service owner, deployment target, risk level, and source of truth.
 4. Confirm available tools and private overlays.
 5. Create or resume a CORTEX task for substantial work.

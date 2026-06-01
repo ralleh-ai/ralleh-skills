@@ -34,11 +34,53 @@ agents/sales/
   DOCTOR.md
   GUIDELINES.md
   WORKFLOWS.md
+  MEMORY.md
+  USER.md
+  PATTERNS.md
   examples/
-    lead-qualification.md
     discovery-call.md
+    lead-qualification.md
     proposal-follow-up.md
 ```
+
+## LLM-readable file index
+
+Load this index when an LLM needs the complete role-agent package. Each local link is intentionally explicit so crawlers and retrieval tools can discover every subfile.
+
+### Core operating files
+
+- [`README.md`](README.md) — role overview, routing, skill map, and first-run checklist.
+- [`SOUL.md`](SOUL.md) — identity, tone, operating principles, boundaries, and continuity.
+- [`IDENTITY.md`](IDENTITY.md) — mission, responsibilities, stakeholders, success measures, and escalation.
+- [`AGENTS.md`](AGENTS.md) — startup checks, delegation, handoffs, task ledger, verification, and memory curation.
+- [`SKILLS.md`](SKILLS.md) — approved skills and skill-loading rules.
+- [`TOOLS.md`](TOOLS.md) — tooling principles, local paths, commands, integrations, safe workflows, and gotchas.
+- [`DOCTOR.md`](DOCTOR.md) — health checks, failure diagnosis, unsafe states, and recovery verification.
+- [`GUIDELINES.md`](GUIDELINES.md) — source-of-truth rules, quality bar, safety boundaries, and review checklist.
+- [`WORKFLOWS.md`](WORKFLOWS.md) — repeatable workflows, inputs, steps, outputs, verification, and escalation.
+- [`MEMORY.md`](MEMORY.md) — curated durable lessons and what not to store.
+- [`USER.md`](USER.md) — stable user/business preference standard for deployed overlays.
+- [`PATTERNS.md`](PATTERNS.md) — cross-workflow patterns that may be promoted to shared patterns.
+
+### Examples
+
+- [`examples/discovery-call.md`](examples/discovery-call.md) — sample discovery call packet/output shape.
+- [`examples/lead-qualification.md`](examples/lead-qualification.md) — sample lead qualification packet/output shape.
+- [`examples/proposal-follow-up.md`](examples/proposal-follow-up.md) — sample proposal follow up packet/output shape.
+
+### Related standards
+
+- [`../Definitions/SOUL.md`](../Definitions/SOUL.md)
+- [`../Definitions/IDENTITY.md`](../Definitions/IDENTITY.md)
+- [`../Definitions/AGENTS.md`](../Definitions/AGENTS.md)
+- [`../Definitions/SKILLS.md`](../Definitions/SKILLS.md)
+- [`../Definitions/TOOLS.md`](../Definitions/TOOLS.md)
+- [`../Definitions/DOCTOR.md`](../Definitions/DOCTOR.md)
+- [`../Definitions/GUIDELINES.md`](../Definitions/GUIDELINES.md)
+- [`../Definitions/WORKFLOWS.md`](../Definitions/WORKFLOWS.md)
+- [`../Definitions/MEMORY.md`](../Definitions/MEMORY.md)
+- [`../Definitions/USER.md`](../Definitions/USER.md)
+- [`../Definitions/PATTERNS.md`](../Definitions/PATTERNS.md)
 
 ## Baseline skill/tool set
 
@@ -69,7 +111,7 @@ Deployment-specific CRM, proposal, contract, or email-sequence tools should be d
 ## First-run checklist
 
 1. Read this `README.md`.
-2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, and `WORKFLOWS.md`.
+2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, `WORKFLOWS.md`, `MEMORY.md`, `USER.md`, and `PATTERNS.md`.
 3. Confirm target offer, ICP, approved positioning, pricing authority, CRM/source of truth, and approval owner.
 4. Confirm which communication tools are available.
 5. Use draft/read-only workflows until explicit approval grants a send/write action.

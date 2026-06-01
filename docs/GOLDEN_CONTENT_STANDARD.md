@@ -26,6 +26,13 @@ Do not check in:
 - Troubleshooting loops without an escalation or stop condition.
 - Environment-specific private data that belongs in `ralleh-skills-private`.
 
+
+## Required shape for a role-agent folder
+
+Each `agents/<role>/` folder must include the complete operating package: `README.md`, `SOUL.md`, `IDENTITY.md`, `AGENTS.md`, `SKILLS.md`, `TOOLS.md`, `DOCTOR.md`, `GUIDELINES.md`, `WORKFLOWS.md`, `MEMORY.md`, `USER.md`, `PATTERNS.md`, and at least one Markdown example under `examples/`.
+
+The role `README.md` must include an LLM-readable file index that links every core file, every example, and the matching definition standards under `agents/Definitions/`. This keeps subcontent discoverable for bots, crawlers, and retrieval systems instead of hiding critical behavior in an unlinked folder tree.
+
 ## Required shape for a skill
 
 Each skill folder must include all four companion files:
@@ -67,4 +74,5 @@ Before committing, ask:
 4. Are all links valid and canonical?
 5. Does every skill include README, INSTALL, DOCTOR, and PROMPTS?
 6. Is the README strong enough to route a bot without over-reading?
-7. Is this golden enough to hand to a production bot?
+7. Do role-agent READMEs expose every subfile through local links?
+8. Is this golden enough to hand to a production bot?

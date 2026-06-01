@@ -110,7 +110,7 @@ A complete role folder should contain:
 
 ```text
 agents/<role>/
-  README.md       # role overview and routing
+  README.md       # role overview, routing, and LLM-readable file index
   SOUL.md         # identity, tone, principles, boundaries
   IDENTITY.md     # mission, scope, responsibilities, success measures
   AGENTS.md       # orchestration and handoff rules
@@ -119,10 +119,13 @@ agents/<role>/
   DOCTOR.md       # role health check and failure diagnosis
   GUIDELINES.md   # role-specific rules and quality bar
   WORKFLOWS.md    # repeatable workflows and verification gates
+  MEMORY.md       # curated durable lessons for deployed overlays
+  USER.md         # stable user/business preference standard
+  PATTERNS.md     # reusable patterns promoted from role lessons
   examples/       # realistic input/output examples
 ```
 
-If a role lacks these files, treat it as a draft role, not a golden agent.
+If a role lacks these files, treat it as a draft role, not a golden agent. Public role folders include `MEMORY.md`, `USER.md`, and `PATTERNS.md` as standards-safe baselines so deployed overlays know what durable context is allowed and what must stay private.
 
 ## Current implementation status
 
@@ -130,9 +133,9 @@ The current public role-agent baselines are not empty shells. They include the c
 
 | Role | Core files | Examples | Status |
 | --- | --- | --- | --- |
-| [`finance`](finance/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, GUIDELINES, WORKFLOWS | monthly close, expense approval, budget forecast | Golden baseline |
-| [`sales`](sales/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, GUIDELINES, WORKFLOWS | lead qualification, discovery call, proposal follow-up | Golden baseline |
-| [`it`](it/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, GUIDELINES, WORKFLOWS | incident response, architecture review, deployment hardening, data migration | Golden baseline |
+| [`finance`](finance/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, GUIDELINES, WORKFLOWS, MEMORY, USER, PATTERNS | monthly close, expense approval, budget forecast | Golden baseline |
+| [`sales`](sales/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, GUIDELINES, WORKFLOWS, MEMORY, USER, PATTERNS | lead qualification, discovery call, proposal follow-up | Golden baseline |
+| [`it`](it/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, GUIDELINES, WORKFLOWS, MEMORY, USER, PATTERNS | incident response, architecture review, deployment hardening, data migration | Golden baseline |
 
 Future likely role folders include `marketing`, `support`, `operations`, `procurement`, and `legal`, but they should be created only when there is a real recurring role, approved skill set, and enough workflow detail to make them useful.
 
@@ -332,7 +335,7 @@ Create a new role agent when the work has durable ownership, recurring workflows
 
 Do not create an agent just because a task happened once. Use a skill, workflow, or CORTEX task instead.
 
-A new role template should include the complete minimum role-agent folder described above. The role folder name should be lowercase. The content should be public-safe, generic, and reusable unless it belongs in a private overlay.
+A new role template should include the complete minimum role-agent folder described above, including the LLM-readable file index in `README.md`. The role folder name should be lowercase. The content should be public-safe, generic, and reusable unless it belongs in a private overlay.
 
 ## First-run protocol for a role agent
 
@@ -344,7 +347,8 @@ A role agent should start by reading the files that define its role and boundari
 4. `SKILLS.md`
 5. `GUIDELINES.md`
 6. `WORKFLOWS.md`
-7. private overlay files, if configured and approved
+7. `MEMORY.md`, `USER.md`, and `PATTERNS.md`
+8. private overlay files, if configured and approved
 
 Then it should identify:
 

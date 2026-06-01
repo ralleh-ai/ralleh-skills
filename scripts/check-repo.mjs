@@ -29,6 +29,20 @@ const placeholderText = [
   /changeme/i,
   /lorem ipsum/i,
 ];
+const requiredAgentDefinitionFiles = [
+  'SOUL.md',
+  'IDENTITY.md',
+  'AGENTS.md',
+  'SKILLS.md',
+  'TOOLS.md',
+  'DOCTOR.md',
+  'GUIDELINES.md',
+  'WORKFLOWS.md',
+  'MEMORY.md',
+  'USER.md',
+  'PATTERNS.md',
+];
+const requiredRoleFiles = ['README.md', ...requiredAgentDefinitionFiles];
 const unsafeText = [
   /ignore (all )?(previous|prior) instructions/i,
   /do anything/i,
@@ -80,7 +94,11 @@ if (isDir('pages')) {
 
 if (isDir('agents')) {
   const ignoredAgentDirs = new Set(['Definitions', 'Evaluation']);
-  const requiredRoleFiles = ['README.md', 'SOUL.md', 'IDENTITY.md', 'AGENTS.md', 'SKILLS.md', 'WORKFLOWS.md', 'GUIDELINES.md', 'DOCTOR.md'];
+  if (!isFile('agents/README.md')) errors.push('missing required file: agents/README.md');
+  for (const file of requiredAgentDefinitionFiles) {
+    if (!isFile(`agents/Definitions/${file}`)) errors.push(`missing agent definition standard: agents/Definitions/${file}`);
+  }
+  if (!isFile('agents/Evaluation/AgentFileAudit.md')) errors.push('missing agent evaluation standard: agents/Evaluation/AgentFileAudit.md');
   for (const name of fs.readdirSync(path.join(root, 'agents'))) {
     const roleRel = `agents/${name}`;
     if (!isDir(roleRel) || ignoredAgentDirs.has(name)) continue;
@@ -93,6 +111,25 @@ if (isDir('agents')) {
     } else {
       const examples = fs.readdirSync(path.join(root, roleRel, 'examples')).filter((f) => f.endsWith('.md'));
       if (!examples.length) errors.push(`agent role examples folder has no markdown examples: ${roleRel}/examples`);
+      for (const example of examples) {
+        const roleReadme = `${roleRel}/README.md`;
+        if (isFile(roleReadme)) {
+          const readmeText = fs.readFileSync(path.join(root, roleReadme), 'utf8');
+          const exampleLink = `examples/${example}`;
+          if (!readmeText.includes(`](${exampleLink})`)) errors.push(`agent role README does not link example: ${roleReadme} -> ${exampleLink}`);
+        }
+      }
+    }
+    if (isFile(`${roleRel}/README.md`)) {
+      const readmeText = fs.readFileSync(path.join(root, `${roleRel}/README.md`), 'utf8');
+      if (!readmeText.includes('## LLM-readable file index')) errors.push(`agent role README missing LLM-readable file index: ${roleRel}/README.md`);
+      for (const file of requiredRoleFiles) {
+        if (!readmeText.includes(`](${file})`)) errors.push(`agent role README does not link required file: ${roleRel}/README.md -> ${file}`);
+      }
+      for (const file of requiredAgentDefinitionFiles) {
+        const standardLink = `../Definitions/${file}`;
+        if (!readmeText.includes(`](${standardLink})`)) errors.push(`agent role README does not link definition standard: ${roleRel}/README.md -> ${standardLink}`);
+      }
     }
   }
 }

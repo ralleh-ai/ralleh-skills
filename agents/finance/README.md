@@ -33,11 +33,53 @@ agents/finance/
   DOCTOR.md
   GUIDELINES.md
   WORKFLOWS.md
+  MEMORY.md
+  USER.md
+  PATTERNS.md
   examples/
-    monthly-close.md
-    expense-approval.md
     budget-forecast.md
+    expense-approval.md
+    monthly-close.md
 ```
+
+## LLM-readable file index
+
+Load this index when an LLM needs the complete role-agent package. Each local link is intentionally explicit so crawlers and retrieval tools can discover every subfile.
+
+### Core operating files
+
+- [`README.md`](README.md) — role overview, routing, skill map, and first-run checklist.
+- [`SOUL.md`](SOUL.md) — identity, tone, operating principles, boundaries, and continuity.
+- [`IDENTITY.md`](IDENTITY.md) — mission, responsibilities, stakeholders, success measures, and escalation.
+- [`AGENTS.md`](AGENTS.md) — startup checks, delegation, handoffs, task ledger, verification, and memory curation.
+- [`SKILLS.md`](SKILLS.md) — approved skills and skill-loading rules.
+- [`TOOLS.md`](TOOLS.md) — tooling principles, local paths, commands, integrations, safe workflows, and gotchas.
+- [`DOCTOR.md`](DOCTOR.md) — health checks, failure diagnosis, unsafe states, and recovery verification.
+- [`GUIDELINES.md`](GUIDELINES.md) — source-of-truth rules, quality bar, safety boundaries, and review checklist.
+- [`WORKFLOWS.md`](WORKFLOWS.md) — repeatable workflows, inputs, steps, outputs, verification, and escalation.
+- [`MEMORY.md`](MEMORY.md) — curated durable lessons and what not to store.
+- [`USER.md`](USER.md) — stable user/business preference standard for deployed overlays.
+- [`PATTERNS.md`](PATTERNS.md) — cross-workflow patterns that may be promoted to shared patterns.
+
+### Examples
+
+- [`examples/budget-forecast.md`](examples/budget-forecast.md) — sample budget forecast packet/output shape.
+- [`examples/expense-approval.md`](examples/expense-approval.md) — sample expense approval packet/output shape.
+- [`examples/monthly-close.md`](examples/monthly-close.md) — sample monthly close packet/output shape.
+
+### Related standards
+
+- [`../Definitions/SOUL.md`](../Definitions/SOUL.md)
+- [`../Definitions/IDENTITY.md`](../Definitions/IDENTITY.md)
+- [`../Definitions/AGENTS.md`](../Definitions/AGENTS.md)
+- [`../Definitions/SKILLS.md`](../Definitions/SKILLS.md)
+- [`../Definitions/TOOLS.md`](../Definitions/TOOLS.md)
+- [`../Definitions/DOCTOR.md`](../Definitions/DOCTOR.md)
+- [`../Definitions/GUIDELINES.md`](../Definitions/GUIDELINES.md)
+- [`../Definitions/WORKFLOWS.md`](../Definitions/WORKFLOWS.md)
+- [`../Definitions/MEMORY.md`](../Definitions/MEMORY.md)
+- [`../Definitions/USER.md`](../Definitions/USER.md)
+- [`../Definitions/PATTERNS.md`](../Definitions/PATTERNS.md)
 
 ## Baseline skill/tool set
 
@@ -69,7 +111,7 @@ Supporting productivity and operations skills:
 ## First-run checklist
 
 1. Read this `README.md`.
-2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, and `WORKFLOWS.md`.
+2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, `WORKFLOWS.md`, `MEMORY.md`, `USER.md`, and `PATTERNS.md`.
 3. Confirm the business/entity, reporting currency, timezone, accounting source of truth, and approval owner.
 4. Confirm which tools are available in the deployment.
 5. Use read-only reports until explicit approval grants a write action.

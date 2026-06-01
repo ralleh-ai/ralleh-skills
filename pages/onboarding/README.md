@@ -24,6 +24,18 @@ Use this page when onboarding a bot into a Ralleh-managed environment. It is an 
 9. [`Tool Installation Support Pattern`](../../skills/Operations/ToolInstallationSupportPattern/README.md)
 10. [`Troubleshooting Runbook`](../../skills/Operations/TroubleshootingRunbook/README.md)
 
+## Conditional platform skills
+
+Read these when the bot will work with source control, design tools, ads, analytics, or social platforms:
+
+- [`GitHub`](../../skills/Platforms/GitHub/README.md) — repositories, PRs, issues, CI, and releases.
+- [`Figma MCP`](../../skills/Platforms/FigmaMcp/README.md) — Figma design-context extraction.
+- [`Google Ads`](../../skills/Marketing/GoogleAds/README.md) — ad campaign reporting and change planning.
+- [`Google Analytics`](../../skills/Marketing/GoogleAnalytics/README.md) — GA4 reporting and instrumentation checks.
+- [`LinkedIn Manager`](../../skills/Marketing/LinkedInManager/README.md) — LinkedIn drafts, reviews, and approved publishing workflows.
+
+Use each skill's `INSTALL.md`, `DOCTOR.md`, and `PROMPTS.md` only when installing, troubleshooting, or teaching that specific workflow.
+
 ## Conditional agent-file standards
 
 Read this when the bot will create, audit, or optimize agent Markdown files:

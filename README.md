@@ -22,6 +22,8 @@ skills/
   Engineering/<Skill>/       # git, implementation, verification
   Automation/<Skill>/        # browser and controlled external-system workflows
   Observability/<Skill>/     # cost, context, health, and usage diagnostics
+  Platforms/<Skill>/         # GitHub, Figma, and platform integrations
+  Marketing/<Skill>/         # ads, analytics, and social marketing workflows
   Security/<Skill>/          # prompt, secret, and trust-boundary defenses
   Visualization/<Skill>/     # diagrams, architecture maps, visual artifacts
   Voice/<Skill>/             # voice, phone, STT, streams, and TTS
@@ -43,6 +45,11 @@ Naming and golden-content rules are enforced by [`docs/NAMING_STANDARD.md`](docs
 - [Prompt Defense Skill](skills/Security/PromptDefense/README.md) — prompt-injection and trust-boundary defense.
 - [Diagram Maker Skill](skills/Visualization/DiagramMaker/README.md) — verified SVG/HTML or Excalidraw diagram artifacts.
 - [Agent File Standards Skill](skills/Agents/AgentFileStandards/README.md) — audit and optimize SOUL, TOOLS, AGENTS, MEMORY, USER, and PATTERNS files.
+- [GitHub Skill](skills/Platforms/GitHub/README.md) — safe repo, issue, PR, CI, and release workflows.
+- [Figma MCP Skill](skills/Platforms/FigmaMcp/README.md) — safe Figma design-context extraction.
+- [Google Ads Skill](skills/Marketing/GoogleAds/README.md) — read-first ad campaign reporting and change planning.
+- [Google Analytics Skill](skills/Marketing/GoogleAnalytics/README.md) — GA4 reporting and instrumentation checks.
+- [LinkedIn Manager Skill](skills/Marketing/LinkedInManager/README.md) — LinkedIn drafts, reviews, and approved publishing workflows.
 - [Talk Voice Skill](skills/Voice/TalkVoice/README.md) — safe conversational voice interaction.
 - [Phone Control Skill](skills/Voice/PhoneControl/README.md) — permission-first paired phone/device control.
 - [Voice Stream Skill](skills/Voice/VoiceStream/README.md) — realtime voice stream lifecycle and guardrails.

@@ -33,6 +33,15 @@ Read this when the bot will inspect or operate web pages:
 - [`Agent Browser Doctor`](../../skills/Automation/AgentBrowser/DOCTOR.md) — when browser automation is broken or blocked.
 - [`Agent Browser Prompts`](../../skills/Automation/AgentBrowser/PROMPTS.md) — when teaching a user how to request browser workflows.
 
+## Conditional observability skill
+
+Read this when the bot will audit token usage, context bloat, cost, or expensive sessions:
+
+- [`Token Doctor`](../../skills/Observability/TokenDoctor/README.md) — overview of observe-only token/context diagnostics.
+- [`Token Doctor Install`](../../skills/Observability/TokenDoctor/INSTALL.md) — when installing or verifying Token Doctor capability.
+- [`Token Doctor Doctor`](../../skills/Observability/TokenDoctor/DOCTOR.md) — when reports are missing, unsafe, or confusing.
+- [`Token Doctor Prompts`](../../skills/Observability/TokenDoctor/PROMPTS.md) — when teaching a user how to request token audits.
+
 ## Conditional task-management skill
 
 Read this when the bot will manage substantial work, subagents, blockers, or project status:

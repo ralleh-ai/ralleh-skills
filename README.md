@@ -18,6 +18,7 @@ skills/
   Foundation/<Skill>/        # operating rules, navigation, safety
   Engineering/<Skill>/       # git, implementation, verification
   Automation/<Skill>/        # browser and controlled external-system workflows
+  Observability/<Skill>/     # cost, context, health, and usage diagnostics
   Memory/<Skill>/            # ENGRAM and recall workflows
   TaskManagement/<Skill>/    # CORTEX and operational task ledgers
   Operations/<Skill>/        # handoffs, installation support, troubleshooting
@@ -31,6 +32,7 @@ Naming and golden-content rules are enforced by [`docs/NAMING_STANDARD.md`](docs
 - [ENGRAM Memory Skill](skills/Memory/Engram/README.md) — durable semantic memory service and CLI for bots.
 - [CORTEX Task Management Skill](skills/TaskManagement/Cortex/README.md) — durable operational task ledger for bots.
 - [Agent Browser Skill](skills/Automation/AgentBrowser/README.md) — safe browser inspection and web UI automation for bots.
+- [Token Doctor Skill](skills/Observability/TokenDoctor/README.md) — observe-only token/context bloat diagnostics for bots.
 
 ## How agents should use this repo
 

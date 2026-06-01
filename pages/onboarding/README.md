@@ -66,6 +66,7 @@ Read these when installing or using the Ralleh MCP research services:
 - [`Ralleh MCP Shop`](../../skills/Commerce/RallehMcpShop/README.md) — curated product/shopping research, source collections, affiliate-presented URLs.
 - [`Ralleh MCP Travel`](../../skills/Travel/RallehMcpTravel/README.md) — curated flight/travel research, fare warnings, no booking/payment.
 - [`Ralleh MCP Search`](../../skills/Knowledge/RallehMcpSearch/README.md) — curated content/news/research lookup, source ranking, consensus, and conflict detection.
+- [`Ralleh MCP Brand`](../../skills/Marketing/RallehMcpBrand/README.md) — brand memory, voice, validation, campaign learning, and governance.
 
 Use the shared runtime skill for VPS operations, and the shop/travel skills for user-facing search behavior.
 

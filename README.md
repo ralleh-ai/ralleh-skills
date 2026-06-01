@@ -138,6 +138,7 @@ This public repo contains golden reusable instructions. Customer-specific hosts,
 - [`GoogleAds`](skills/Marketing/GoogleAds/README.md) — read-first ad campaign reporting and approved change planning.
 - [`GoogleAnalytics`](skills/Marketing/GoogleAnalytics/README.md) — GA4 reporting, instrumentation checks, and conversion analysis.
 - [`LinkedInManager`](skills/Marketing/LinkedInManager/README.md) — LinkedIn drafts, reviews, and approved publishing workflows.
+- [`RallehMcpBrand`](skills/Marketing/RallehMcpBrand/README.md) — brand memory, voice, campaign learning, validation, and governance.
 
 ### Memory
 

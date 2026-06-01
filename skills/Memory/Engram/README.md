@@ -1,146 +1,58 @@
 # ENGRAM Memory Skill
 
-## Purpose
+## What ENGRAM is
 
-ENGRAM gives bots durable memory: buffered events, semantic search, consolidation, and a small CLI/API surface for recall. Point a bot at this file when you want it to install, verify, or support ENGRAM.
+ENGRAM is a durable memory layer for bots and AI employees. It gives an agent a way to preserve useful context across sessions, search prior work semantically, and turn raw session notes into reusable project memory.
 
+In a Ralleh environment, ENGRAM is the long-term recall companion to the bot's live tools and local notes. It helps a bot answer questions like:
 
-## Companion files
+- What did we decide last time?
+- What broke before, and how did we fix it?
+- What preferences, standards, and project facts should I remember?
+- What prior context should I load before acting?
 
-- [`DOCTOR.md`](DOCTOR.md) — troubleshoot ENGRAM install, service, search, and OpenClaw integration problems.
-- [`PROMPTS.md`](PROMPTS.md) — suggested user-facing prompts for recall, saving memories, maintenance, and consolidation.
+## What ENGRAM does
 
-## Safety and scope
+- Stores durable memory objects for decisions, lessons, project context, and operational notes.
+- Supports semantic search so bots can recall related memories, not just exact text matches.
+- Provides CLI/service access through `engramctl` and `engramd`.
+- Supports health checks, backups, and smoke tests for memory reliability.
+- Can integrate with OpenClaw memory workflows as a sidecar memory source.
 
-- Do not store secrets in ENGRAM memories.
-- Do not expose private user memories in logs, tickets, or public channels.
-- Back up the ENGRAM data directory before upgrades or destructive maintenance.
-- If this public guide lacks a deployment-specific value, ask for it or use the private repo instructions.
+## When a bot should use it
 
-## Prerequisites
+Use ENGRAM when the user asks about prior work, decisions, blockers, preferences, todos, project history, or recurring lessons. Also use it after meaningful work to preserve hard-won context for the next session.
 
-- Linux host with systemd recommended.
-- `curl`, `tar`, and `sqlite3` recommended for install and support.
-- Optional: OpenClaw integration if the bot platform is OpenClaw.
-- Required values, when applicable:
-  - `ENGRAM_DATA_DIR` — defaults to `~/.local/share/engram`
-  - `ENGRAM_ADDR` — defaults to `127.0.0.1:37371`
+Do not use ENGRAM to store secrets, raw credentials, private keys, session cookies, or sensitive data that should not be recalled later.
 
-## Install
+## Files in this skill
 
-Preferred install from an existing ENGRAM source checkout:
+- [`INSTALL.md`](INSTALL.md) — install, configure, verify, operate, and OpenClaw integration instructions.
+- [`DOCTOR.md`](DOCTOR.md) — troubleshooting guide for broken installs, service failures, search failures, and wrapper issues.
+- [`PROMPTS.md`](PROMPTS.md) — suggested user-facing prompts for recall, memory capture, maintenance, and consolidation workflows.
 
-```bash
-cd ~/projects/engram
-./scripts/install.sh
-```
+## Common workflows
 
-If the host only has release artifacts, install the two binaries into the user's local bin directory:
+### Install ENGRAM
 
-```bash
-mkdir -p ~/.local/bin ~/.local/share/engram
-install -m 755 engramd ~/.local/bin/engramd
-install -m 755 engramctl ~/.local/bin/engramctl
-```
+Read [`INSTALL.md`](INSTALL.md), then run the documented install/configure/verify flow. Do not claim success until the smoke test passes.
 
-Ensure the binaries are on `PATH`:
+### Troubleshoot ENGRAM
 
-```bash
-export PATH="$HOME/.local/bin:$PATH"
-engramctl --help
-engramd --help
-```
+Read [`DOCTOR.md`](DOCTOR.md), run the fast triage commands, then report status as healthy, degraded, down, or not installed.
 
-## Configure
+### Teach a user how to use ENGRAM
 
-Default local configuration:
+Read [`PROMPTS.md`](PROMPTS.md) and suggest natural prompts the user can send, such as asking the bot to recall project decisions, save a troubleshooting lesson, or run an ENGRAM health check.
 
-```bash
-export ENGRAM_DATA_DIR="${ENGRAM_DATA_DIR:-$HOME/.local/share/engram}"
-export ENGRAM_ADDR="${ENGRAM_ADDR:-127.0.0.1:37371}"
-mkdir -p "$ENGRAM_DATA_DIR"
-```
+## OpenClaw recall pattern
 
-For systemd hosts, create a user service only after confirming the binary path:
+For important recall inside OpenClaw, use dual recall:
 
-```ini
-[Unit]
-Description=ENGRAM memory service
-After=network.target
-
-[Service]
-Type=simple
-ExecStart=%h/.local/bin/engramd serve --addr 127.0.0.1:37371 --data-dir %h/.local/share/engram
-Restart=on-failure
-RestartSec=5
-
-[Install]
-WantedBy=default.target
-```
-
-Enable it:
-
-```bash
-systemctl --user daemon-reload
-systemctl --user enable --now engramd
-systemctl --user status engramd --no-pager
-```
-
-## Verify
-
-Run the smallest smoke test before claiming success:
-
-```bash
-engramctl status
-engramctl remember "ENGRAM smoke test memory" --type note --scope agent
-engramctl search "smoke test memory" --limit 3
-```
-
-Expected result: status succeeds, the memory write succeeds, and search returns the smoke-test memory.
-
-For OpenClaw memory-script integration, verify the wrapper too:
-
-```bash
-cd ~/.openclaw/workspace
-node scripts/memory/mem-status.js
-node scripts/memory/mem-search.js "ENGRAM smoke test memory" --json
-```
-
-## Operate
-
-Common support commands:
-
-```bash
-# service status/logs
-systemctl --user status engramd --no-pager
-journalctl --user -u engramd -n 100 --no-pager
-
-# CLI health
-engramctl status
-engramctl search "recent work" --limit 5
-
-# backup SQLite data before maintenance
-mkdir -p ~/.local/share/engram/backups
-cp ~/.local/share/engram/engram.sqlite ~/.local/share/engram/backups/engram-$(date -u +%Y%m%dT%H%M%SZ).sqlite.bak
-```
-
-## OpenClaw integration pattern
-
-When integrating with OpenClaw, keep ENGRAM as the sidecar durable memory layer and keep native OpenClaw memory search enabled. For important recall, use dual recall:
-
-1. OpenClaw native `memory_search`.
-2. ENGRAM sidecar search, usually through `scripts/memory/mem-search.js`.
-3. Merge the results and cite the source when useful.
-
-## Troubleshooting
-
-| Symptom | Check | Fix |
-| --- | --- | --- |
-| `engramctl` not found | `echo $PATH && ls ~/.local/bin/engramctl` | Add `~/.local/bin` to `PATH` or reinstall binaries. |
-| Service will not start | `journalctl --user -u engramd -n 100 --no-pager` | Fix the binary path, data-dir permissions, or port conflict shown in logs. |
-| Search returns nothing | Confirm memories exist and the service is running | Run a smoke-test `remember`, then search exact text. |
-| OpenClaw wrapper falls back unexpectedly | Run `node scripts/memory/mem-status.js` | Start ENGRAM or inspect wrapper configuration. |
+1. Native OpenClaw memory search.
+2. ENGRAM sidecar search.
+3. Merge results, prefer cited and recent evidence, and say clearly when memory is unavailable or inconclusive.
 
 ## Handoff prompt
 
-> Read `ENGRAM.md` first. Install ENGRAM, configure it as a local service if systemd is available, run the smoke tests, and report the exact verification output. Do not guess missing deployment-specific values.
+> Read `README.md` first to understand ENGRAM. If installing, continue with `INSTALL.md`. If troubleshooting, continue with `DOCTOR.md`. If helping the user interact with memory features, continue with `PROMPTS.md`. Do not store secrets in memory and do not guess missing deployment values.

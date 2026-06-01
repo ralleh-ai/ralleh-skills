@@ -11,6 +11,7 @@ Each skill is a self-contained Markdown guide that an agent can read from a repo
 - [`agents/README.md`](agents/README.md) — golden standards for agent Markdown files.
 - [`agents/finance/README.md`](agents/finance/README.md) — golden baseline Finance role agent template.
 - [`agents/sales/README.md`](agents/sales/README.md) — golden baseline Sales role agent template.
+- [`agents/it/README.md`](agents/it/README.md) — golden baseline IT role agent template.
 
 ## Organization
 

@@ -24,6 +24,15 @@ Use this page when onboarding a bot into a Ralleh-managed environment. It is an 
 9. [`Tool Installation Support Pattern`](../../skills/Operations/ToolInstallationSupportPattern/README.md)
 10. [`Troubleshooting Runbook`](../../skills/Operations/TroubleshootingRunbook/README.md)
 
+## Conditional automation skill
+
+Read this when the bot will inspect or operate web pages:
+
+- [`Agent Browser`](../../skills/Automation/AgentBrowser/README.md) — overview of safe browser inspection and web UI automation.
+- [`Agent Browser Install`](../../skills/Automation/AgentBrowser/INSTALL.md) — when confirming browser automation capability.
+- [`Agent Browser Doctor`](../../skills/Automation/AgentBrowser/DOCTOR.md) — when browser automation is broken or blocked.
+- [`Agent Browser Prompts`](../../skills/Automation/AgentBrowser/PROMPTS.md) — when teaching a user how to request browser workflows.
+
 ## Conditional task-management skill
 
 Read this when the bot will manage substantial work, subagents, blockers, or project status:

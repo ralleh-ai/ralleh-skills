@@ -24,6 +24,17 @@ Use this page when onboarding a bot into a Ralleh-managed environment. It is an 
 9. [`Tool Installation Support Pattern`](../../skills/Operations/ToolInstallationSupportPattern/README.md)
 10. [`Troubleshooting Runbook`](../../skills/Operations/TroubleshootingRunbook/README.md)
 
+## Conditional productivity skills
+
+Read these when the bot will work with spreadsheets, Google Workspace, Microsoft 365, or calendars:
+
+- [`Google Sheets`](../../skills/Productivity/GoogleSheets/README.md) — spreadsheet reads, reporting, and approved updates.
+- [`GOG`](../../skills/Productivity/Gog/README.md) — Google Workspace CLI workflows.
+- [`Office365 Connector`](../../skills/Productivity/Office365Connector/README.md) — Microsoft 365 connector workflows.
+- [`Calendar Scheduler`](../../skills/Productivity/CalendarScheduler/README.md) — calendar availability, event drafting, and scheduling.
+
+Use each skill's `INSTALL.md`, `DOCTOR.md`, and `PROMPTS.md` only when installing, troubleshooting, or teaching that specific workflow.
+
 ## Conditional finance skills
 
 Read these when the bot will handle bookkeeping, expenses, reports, or payments:

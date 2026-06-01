@@ -24,6 +24,7 @@ skills/
   Observability/<Skill>/     # cost, context, health, and usage diagnostics
   Platforms/<Skill>/         # GitHub, Figma, and platform integrations
   Marketing/<Skill>/         # ads, analytics, and social marketing workflows
+  Productivity/<Skill>/      # office suites, sheets, calendars, docs
   Finance/<Skill>/           # bookkeeping, expenses, reports, payments
   Security/<Skill>/          # prompt, secret, and trust-boundary defenses
   Visualization/<Skill>/     # diagrams, architecture maps, visual artifacts
@@ -55,6 +56,10 @@ Naming and golden-content rules are enforced by [`docs/NAMING_STANDARD.md`](docs
 - [Expense Tracker Skill](skills/Finance/ExpenseTracker/README.md) — expense capture, evidence matching, and spend summaries.
 - [Financial Reporter Skill](skills/Finance/FinancialReporter/README.md) — management-ready financial reports from approved sources.
 - [Stripe Skill](skills/Finance/Stripe/README.md) — safe Stripe payments, subscriptions, payouts, and webhook workflows.
+- [Google Sheets Skill](skills/Productivity/GoogleSheets/README.md) — safe spreadsheet reads, reporting, and approved updates.
+- [GOG Skill](skills/Productivity/Gog/README.md) — Google Workspace CLI workflows.
+- [Office365 Connector Skill](skills/Productivity/Office365Connector/README.md) — Microsoft 365 connector workflows.
+- [Calendar Scheduler Skill](skills/Productivity/CalendarScheduler/README.md) — provider-agnostic scheduling and event drafting.
 - [Talk Voice Skill](skills/Voice/TalkVoice/README.md) — safe conversational voice interaction.
 - [Phone Control Skill](skills/Voice/PhoneControl/README.md) — permission-first paired phone/device control.
 - [Voice Stream Skill](skills/Voice/VoiceStream/README.md) — realtime voice stream lifecycle and guardrails.

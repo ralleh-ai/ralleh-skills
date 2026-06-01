@@ -5,9 +5,12 @@ Ralleh skills are organized by capability family. Each skill is a Markdown runbo
 ## Families
 
 - [`Foundation`](Foundation/) — operating protocol, navigation, safety.
+- [`Communication`](Communication/) — agent/session/user communication patterns.
 - [`Engineering`](Engineering/) — git, implementation, verification standards.
 - [`Automation`](Automation/) — browser and controlled external-system workflows.
 - [`Observability`](Observability/) — cost, context, health, and usage diagnostics.
+- [`Security`](Security/) — prompt, secret, and trust-boundary defenses.
+- [`Visualization`](Visualization/) — diagrams, architecture maps, visual artifacts.
 - [`Memory`](Memory/) — durable memory, recall, consolidation.
 - [`TaskManagement`](TaskManagement/) — durable task ledgers, blockers, handoffs, completion evidence.
 - [`Operations`](Operations/) — handoffs, installation support, troubleshooting.

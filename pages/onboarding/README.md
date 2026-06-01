@@ -24,6 +24,33 @@ Use this page when onboarding a bot into a Ralleh-managed environment. It is an 
 9. [`Tool Installation Support Pattern`](../../skills/Operations/ToolInstallationSupportPattern/README.md)
 10. [`Troubleshooting Runbook`](../../skills/Operations/TroubleshootingRunbook/README.md)
 
+## Conditional communication skill
+
+Read this when the bot will coordinate with other agents or sessions:
+
+- [`OpenClaw A2A`](../../skills/Communication/OpenClawA2A/README.md) — overview of safe agent-to-agent routing and handoffs.
+- [`OpenClaw A2A Install`](../../skills/Communication/OpenClawA2A/INSTALL.md) — when verifying A2A capability.
+- [`OpenClaw A2A Doctor`](../../skills/Communication/OpenClawA2A/DOCTOR.md) — when routing, sessions, or handoffs fail.
+- [`OpenClaw A2A Prompts`](../../skills/Communication/OpenClawA2A/PROMPTS.md) — when teaching a user how to request delegation.
+
+## Conditional security skill
+
+Read this whenever the bot processes untrusted external content or suspected injection:
+
+- [`Prompt Defense`](../../skills/Security/PromptDefense/README.md) — overview of prompt-injection and trust-boundary defense.
+- [`Prompt Defense Install`](../../skills/Security/PromptDefense/INSTALL.md) — when verifying prompt-defense behavior.
+- [`Prompt Defense Doctor`](../../skills/Security/PromptDefense/DOCTOR.md) — when investigating a suspected injection or leak.
+- [`Prompt Defense Prompts`](../../skills/Security/PromptDefense/PROMPTS.md) — when teaching a user how to request security reviews.
+
+## Conditional visualization skill
+
+Read this when the bot will create a diagram or visual artifact:
+
+- [`Diagram Maker`](../../skills/Visualization/DiagramMaker/README.md) — overview of diagram artifact creation.
+- [`Diagram Maker Install`](../../skills/Visualization/DiagramMaker/INSTALL.md) — when verifying diagram generation capability.
+- [`Diagram Maker Doctor`](../../skills/Visualization/DiagramMaker/DOCTOR.md) — when a diagram is missing, invalid, or unreadable.
+- [`Diagram Maker Prompts`](../../skills/Visualization/DiagramMaker/PROMPTS.md) — when teaching a user how to request diagrams.
+
 ## Conditional automation skill
 
 Read this when the bot will inspect or operate web pages:

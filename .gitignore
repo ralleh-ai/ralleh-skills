@@ -1,0 +1,19 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Runtime/local-only
+.env
+.env.*
+.secrets/
+*.key
+*.pem
+*.p12
+*.sqlite
+*.sqlite3
+*.db
+node_modules/
+dist/
+build/

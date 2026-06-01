@@ -6,7 +6,7 @@ Who should read this bundle and what it prepares them to do.
 
 ## Reading order
 
-1. [`Instruction name`](../../skills/Family/Skill.md)
+1. `../../skills/Family/Skill.md` — Instruction name
 2. ...
 
 ## Completion check

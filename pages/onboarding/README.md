@@ -58,6 +58,16 @@ Read these when the bot will work with source control, design tools, ads, analyt
 
 Use each skill's `INSTALL.md`, `DOCTOR.md`, and `PROMPTS.md` only when installing, troubleshooting, or teaching that specific workflow.
 
+## Conditional Ralleh MCP skills
+
+Read these when installing or using the Ralleh MCP research services:
+
+- [`Ralleh MCP`](../../skills/Infrastructure/RallehMcp/README.md) — install, upgrade, backup, health, local-only VPS operation.
+- [`Ralleh MCP Shop`](../../skills/Commerce/RallehMcpShop/README.md) — curated product/shopping research, source collections, affiliate-presented URLs.
+- [`Ralleh MCP Travel`](../../skills/Travel/RallehMcpTravel/README.md) — curated flight/travel research, fare warnings, no booking/payment.
+
+Use the shared runtime skill for VPS operations, and the shop/travel skills for user-facing search behavior.
+
 ## Conditional VPS provisioning skills
 
 Read these when the bot will provision, verify, or troubleshoot managed VPS software:

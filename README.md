@@ -9,6 +9,7 @@ Each skill is a self-contained Markdown guide that an agent can read from a repo
 - [`pages/onboarding/README.md`](pages/onboarding/README.md) — the first 10 instructions a bot should read when onboarding into a Ralleh-managed environment.
 - [`skills/README.md`](skills/README.md) — skill library map by family.
 - [`agents/README.md`](agents/README.md) — golden standards for agent Markdown files.
+- [`agents/finance/README.md`](agents/finance/README.md) — golden baseline Finance role agent template.
 
 ## Organization
 

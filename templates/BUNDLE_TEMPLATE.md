@@ -4,6 +4,10 @@
 
 Who should read this bundle and what it prepares them to do.
 
+## Naming
+
+Create every bundle as `bundles/<bundle-slug>/README.md`. Use lowercase kebab-case for `<bundle-slug>`. See `docs/NAMING_STANDARD.md`.
+
 ## Reading order
 
 1. `../../skills/Family/Skill.md` — Instruction name

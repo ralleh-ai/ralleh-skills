@@ -1,5 +1,9 @@
 # Skill Name
 
+## Naming
+
+Create every skill as `skills/<FamilyName>/<SkillName>/README.md`. Use PascalCase for `FamilyName` and `SkillName`. Optional companion files are `INSTALL.md`, `DOCTOR.md`, and `PROMPTS.md`. See `docs/NAMING_STANDARD.md`.
+
 ## Purpose
 
 What this skill/tool does, when a bot should use it, and what success looks like.

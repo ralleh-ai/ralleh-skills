@@ -6,21 +6,23 @@ Each skill is a self-contained Markdown guide that an agent can read from a repo
 
 ## Start here
 
-- [`bundles/onboarding/BOT_ONBOARDING_INDEX.md`](bundles/onboarding/BOT_ONBOARDING_INDEX.md) — the first 10 instructions a bot should read when onboarding into a Ralleh-managed environment.
+- [`bundles/onboarding/README.md`](bundles/onboarding/README.md) — the first 10 instructions a bot should read when onboarding into a Ralleh-managed environment.
 - [`skills/README.md`](skills/README.md) — skill library map by family.
 
 ## Organization
 
 ```text
 bundles/                     # ordered reading lists
-  onboarding/                # bot onboarding package
+  onboarding/README.md       # bot onboarding package
 skills/
-  Foundation/                # operating rules, navigation, safety
-  Engineering/               # git, implementation, verification
-  Memory/                    # ENGRAM and recall workflows
-  Operations/                # handoffs, installation support, troubleshooting
+  Foundation/<Skill>/        # operating rules, navigation, safety
+  Engineering/<Skill>/       # git, implementation, verification
+  Memory/<Skill>/            # ENGRAM and recall workflows
+  Operations/<Skill>/        # handoffs, installation support, troubleshooting
 templates/                   # authoring templates
 ```
+
+Naming is enforced by [`docs/NAMING_STANDARD.md`](docs/NAMING_STANDARD.md) and [`scripts/check-names.mjs`](scripts/check-names.mjs).
 
 ## Canonical skill examples
 

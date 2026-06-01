@@ -11,4 +11,4 @@ Ralleh skills are organized by capability family. Each skill is a Markdown runbo
 
 ## Bundles
 
-Bundles are ordered reading lists for a role or scenario. Start with [`bundles/onboarding/BOT_ONBOARDING_INDEX.md`](../bundles/onboarding/BOT_ONBOARDING_INDEX.md).
+Bundles are ordered reading lists for a role or scenario. Start with [`bundles/onboarding/README.md`](../bundles/onboarding/README.md).

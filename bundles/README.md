@@ -4,4 +4,4 @@ Bundles are ordered reading lists. Use them when a bot needs a role, workflow, o
 
 ## Available bundles
 
-- [`Bot Onboarding`](onboarding/BOT_ONBOARDING_INDEX.md) — the first 10 instructions a bot should read in a Ralleh environment.
+- [`Bot Onboarding`](onboarding/README.md) — the first 10 instructions a bot should read in a Ralleh environment.

@@ -4,6 +4,12 @@
 
 ENGRAM gives bots durable memory: buffered events, semantic search, consolidation, and a small CLI/API surface for recall. Point a bot at this file when you want it to install, verify, or support ENGRAM.
 
+
+## Companion files
+
+- [`DOCTOR.md`](DOCTOR.md) — troubleshoot ENGRAM install, service, search, and OpenClaw integration problems.
+- [`PROMPTS.md`](PROMPTS.md) — suggested user-facing prompts for recall, saving memories, maintenance, and consolidation.
+
 ## Safety and scope
 
 - Do not store secrets in ENGRAM memories.

@@ -21,8 +21,8 @@ Stop before VPS rebuild, DNS mutation, plan changes, or destructive host operati
 ```bash
 ralleh-provision discover <manifest>
 ralleh-provision verify <manifest>
-dig +short example.com
-curl -I https://example.com
+dig +short <approved-hostname>
+curl -I https://<approved-hostname>
 ```
 
 ## Doctor report format

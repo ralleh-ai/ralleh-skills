@@ -15,7 +15,7 @@ Ralleh MCP Shop is the curated shopping/product research skill for `ralleh-mcp-s
 
 Use Ralleh MCP Shop when a user wants product research, price comparison, gift ideas, tool/electronics/toy shopping options, or affiliate-ready product links without purchasing.
 
-## Golden rules
+## Operating rules
 
 - Prefer deterministic health/status checks before action.
 - Keep services VPS-local unless an explicit secured exposure plan exists.
@@ -28,3 +28,7 @@ Use Ralleh MCP Shop when a user wants product research, price comparison, gift i
 - [`INSTALL.md`](INSTALL.md) — install, configure, upgrade, and verify.
 - [`DOCTOR.md`](DOCTOR.md) — troubleshoot failures and unsafe states.
 - [`PROMPTS.md`](PROMPTS.md) — safe prompt examples.
+
+## Golden operating rule
+
+Use curated source collections only, present affiliate-aware product research with source diagnostics, never perform checkout/payment/login, and report partial/degraded product coverage honestly.

@@ -10,6 +10,9 @@ const isFile = (p) => exists(p) && fs.statSync(path.join(root, p)).isFile();
 const pascal = /^[A-Z][A-Za-z0-9]*$/;
 const kebab = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const companion = new Set(['README.md', 'INSTALL.md', 'DOCTOR.md', 'PROMPTS.md']);
+const requiredSkillFiles = ['README.md', 'INSTALL.md', 'DOCTOR.md', 'PROMPTS.md'];
+const requiredSkillReadmeSections = [/## What /, /## When /, /## Files in this skill/, /## Golden operating rule/];
+const requiredFamilySections = ['## Purpose', '## Before using this family', '## Available skills', '## Selection rule', '## Completion standard'];
 const allowedRootDirs = new Set(['.git', 'agents', 'docs', 'mcp', 'pages', 'scripts', 'skills']);
 const forbiddenDirs = new Set(['bundle', 'bundles', 'template', 'templates', 'tmp', 'temp', 'scratch', 'drafts', 'archive']);
 const forbiddenFilePatterns = [
@@ -19,6 +22,12 @@ const forbiddenFilePatterns = [
   /(^|\/)TEMP/i,
   /\.tmp$/i,
   /\.bak$/i,
+];
+const placeholderText = [
+  /example\.com/i,
+  /you@example\.com/i,
+  /changeme/i,
+  /lorem ipsum/i,
 ];
 const unsafeText = [
   /ignore (all )?(previous|prior) instructions/i,
@@ -94,7 +103,14 @@ if (isDir('skills')) {
     if (family === 'README.md') continue;
     if (!isDir(familyRel)) continue;
     if (!pascal.test(family)) errors.push(`skill family must be PascalCase: ${familyRel}`);
-    if (!isFile(`${familyRel}/README.md`)) errors.push(`skill family missing README.md: ${familyRel}`);
+    if (!isFile(`${familyRel}/README.md`)) {
+      errors.push(`skill family missing README.md: ${familyRel}`);
+    } else {
+      const familyReadme = fs.readFileSync(path.join(root, familyRel, 'README.md'), 'utf8');
+      for (const section of requiredFamilySections) {
+        if (!familyReadme.includes(section)) errors.push(`skill family README missing section ${section}: ${familyRel}/README.md`);
+      }
+    }
     for (const item of fs.readdirSync(path.join(root, familyRel))) {
       const itemRel = `${familyRel}/${item}`;
       if (item === 'README.md') continue;
@@ -104,7 +120,17 @@ if (isDir('skills')) {
       }
       if (!isDir(itemRel)) continue;
       if (!pascal.test(item)) errors.push(`skill folder must be PascalCase: ${itemRel}`);
-      if (!isFile(`${itemRel}/README.md`)) errors.push(`skill missing README.md: ${itemRel}`);
+      for (const required of requiredSkillFiles) {
+        if (!isFile(`${itemRel}/${required}`)) errors.push(`skill missing required file: ${itemRel}/${required}`);
+      }
+      if (isFile(`${itemRel}/README.md`)) {
+        const skillReadme = fs.readFileSync(path.join(root, itemRel, 'README.md'), 'utf8');
+        const words = skillReadme.trim().split(/\s+/).filter(Boolean).length;
+        if (words < 120) errors.push(`skill README too thin (<120 words): ${itemRel}/README.md`);
+        for (const section of requiredSkillReadmeSections) {
+          if (!section.test(skillReadme)) errors.push(`skill README missing required section ${section}: ${itemRel}/README.md`);
+        }
+      }
       for (const file of fs.readdirSync(path.join(root, itemRel))) {
         const fileRel = `${itemRel}/${file}`;
         if (isDir(fileRel)) continue;
@@ -128,6 +154,9 @@ for (const md of walk('.').filter((p) => p.endsWith('.md'))) {
   }
   for (const pattern of unsafeText) {
     if (pattern.test(text)) errors.push(`unsafe/open-ended prompt language in ${md}: ${pattern}`);
+  }
+  for (const pattern of placeholderText) {
+    if (pattern.test(text)) errors.push(`non-enterprise placeholder text in ${md}: ${pattern}`);
   }
 }
 

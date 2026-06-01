@@ -18,7 +18,7 @@ It helps bots understand, validate, improve, and preserve a brand over time.
 
 Use Ralleh MCP Brand when creating, reviewing, validating, rewriting, or learning from branded content, campaigns, messaging frameworks, audience personas, style guides, and brand positioning.
 
-## Golden rules
+## Operating rules
 
 - Read brand profile/voice before writing branded content.
 - Ask before mutating canonical brand truth.
@@ -32,3 +32,7 @@ Use Ralleh MCP Brand when creating, reviewing, validating, rewriting, or learnin
 - [`INSTALL.md`](INSTALL.md) — install and verify `ralleh-mcp-brand`.
 - [`DOCTOR.md`](DOCTOR.md) — troubleshoot brand memory, validation, storage, and audit issues.
 - [`PROMPTS.md`](PROMPTS.md) — prompt patterns for brand strategy, content validation, campaign memory, and rewrites.
+
+## Golden operating rule
+
+Read canonical brand memory before creating brand work, ask before mutating brand truth, preserve audit/version history, and treat scores as decision support rather than legal or executive approval.

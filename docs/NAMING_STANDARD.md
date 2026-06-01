@@ -49,9 +49,9 @@ skills/
     README.md
     <SkillName>/
       README.md
-      INSTALL.md      # optional
-      DOCTOR.md       # optional
-      PROMPTS.md      # optional
+      INSTALL.md      # required setup/readiness guidance
+      DOCTOR.md       # required troubleshooting and stop conditions
+      PROMPTS.md      # required safe prompt examples
 scripts/
   check-repo.mjs
 ```
@@ -81,4 +81,4 @@ Run this before committing:
 node scripts/check-repo.mjs
 ```
 
-The check fails on non-standard folders, loose family-level skill files, missing `README.md` entrypoints, broken local Markdown links, unsupported temp folders, and unsafe placeholder language.
+The check fails on non-standard folders, loose family-level skill files, missing required companion files, thin skill READMEs, broken local Markdown links, unsupported temp folders, and unsafe placeholder language.

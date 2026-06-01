@@ -130,9 +130,9 @@ The current public role-agent baselines are not empty shells. They include the c
 
 | Role | Core files | Examples | Status |
 | --- | --- | --- | --- |
-| [`finance`](finance/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, guidelines, workflows | monthly close, expense approval, budget forecast | Golden baseline |
-| [`sales`](sales/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, guidelines, workflows | lead qualification, discovery call, proposal follow-up | Golden baseline |
-| [`it`](it/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, guidelines, workflows | incident response, architecture review, deployment hardening, data migration | Golden baseline |
+| [`finance`](finance/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, GUIDELINES, WORKFLOWS | monthly close, expense approval, budget forecast | Golden baseline |
+| [`sales`](sales/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, GUIDELINES, WORKFLOWS | lead qualification, discovery call, proposal follow-up | Golden baseline |
+| [`it`](it/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, GUIDELINES, WORKFLOWS | incident response, architecture review, deployment hardening, data migration | Golden baseline |
 
 Future likely role folders include `marketing`, `support`, `operations`, `procurement`, and `legal`, but they should be created only when there is a real recurring role, approved skill set, and enough workflow detail to make them useful.
 

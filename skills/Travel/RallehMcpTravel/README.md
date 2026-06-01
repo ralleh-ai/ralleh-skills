@@ -15,7 +15,7 @@ Ralleh MCP Travel is the curated flight/travel research skill for `ralleh-mcp-tr
 
 Use Ralleh MCP Travel when a user wants flight research, itinerary comparison, fare-trap explanation, airport suggestions, or price-watch planning without booking.
 
-## Golden rules
+## Operating rules
 
 - Prefer deterministic health/status checks before action.
 - Keep services VPS-local unless an explicit secured exposure plan exists.
@@ -28,3 +28,7 @@ Use Ralleh MCP Travel when a user wants flight research, itinerary comparison, f
 - [`INSTALL.md`](INSTALL.md) — install, configure, upgrade, and verify.
 - [`DOCTOR.md`](DOCTOR.md) — troubleshoot failures and unsafe states.
 - [`PROMPTS.md`](PROMPTS.md) — safe prompt examples.
+
+## Golden operating rule
+
+Research travel through approved sources only, warn about fare and itinerary risks, never book/pay/login/collect passenger PII, and present partial or degraded coverage honestly.

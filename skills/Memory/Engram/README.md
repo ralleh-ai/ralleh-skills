@@ -56,3 +56,7 @@ For important recall inside OpenClaw, use dual recall:
 ## Handoff prompt
 
 > Read `README.md` first to understand ENGRAM. If installing, continue with `INSTALL.md`. If troubleshooting, continue with `DOCTOR.md`. If helping the user interact with memory features, continue with `PROMPTS.md`. Do not store secrets in memory and do not guess missing deployment values.
+
+## Golden operating rule
+
+Use ENGRAM to preserve and retrieve durable context, not to replace live verification. Search memory before answering prior-context questions, cite important facts when useful, protect private data, and state low confidence honestly.

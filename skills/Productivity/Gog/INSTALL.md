@@ -27,7 +27,7 @@ Safe read checks:
 
 ```bash
 gog gmail search 'newer_than:7d' --max 5
-GOG_ACCOUNT=you@example.com gog calendar events primary --from <iso> --to <iso>
+GOG_ACCOUNT=<approved-account-email> gog calendar events primary --from <iso-start> --to <iso-end>
 gog drive search "name contains 'test'" --max 5
 ```
 

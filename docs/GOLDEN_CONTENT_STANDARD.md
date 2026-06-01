@@ -28,15 +28,24 @@ Do not check in:
 
 ## Required shape for a skill
 
-Each skill folder must include:
+Each skill folder must include all four companion files:
 
-- `README.md` — what it is, what it does, when to use it, safety boundaries, and next files.
+- `README.md` — what it is, what it does, when to use it, safety boundaries, files in the skill, and the golden operating rule.
+- `INSTALL.md` — install/configure/verify/operate, or readiness checks when the skill has no software install.
+- `DOCTOR.md` — diagnose/troubleshoot with explicit stop conditions and recovery verification.
+- `PROMPTS.md` — safe user-facing prompt suggestions, including prompts that need narrowing or approval.
 
-Optional companion files:
+A `README.md` that only lists a purpose is not golden. It must be useful enough for a bot to choose the skill, understand the boundary, and know which companion file to load next.
 
-- `INSTALL.md` — install/configure/verify/operate.
-- `DOCTOR.md` — diagnose/troubleshoot with explicit stop conditions.
-- `PROMPTS.md` — safe user-facing prompt suggestions.
+## Required shape for a skill family index
+
+Each `skills/<Family>/README.md` must include:
+
+- Purpose.
+- Guardrails before using the family.
+- Available skills.
+- Selection rule.
+- Completion standard.
 
 ## Required shape for an instruction page
 
@@ -56,4 +65,6 @@ Before committing, ask:
 2. Could this cause destructive or external action without approval?
 3. Does every command have context and verification?
 4. Are all links valid and canonical?
-5. Is this golden enough to hand to a production bot?
+5. Does every skill include README, INSTALL, DOCTOR, and PROMPTS?
+6. Is the README strong enough to route a bot without over-reading?
+7. Is this golden enough to hand to a production bot?

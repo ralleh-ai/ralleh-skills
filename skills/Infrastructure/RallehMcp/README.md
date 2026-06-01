@@ -15,7 +15,7 @@ Ralleh MCP is the VPS-local Go MCP service family for enterprise-grade, bounded 
 
 Use Ralleh MCP when installing, upgrading, backing up, health-checking, or troubleshooting the shared MCP runtime on a VPS.
 
-## Golden rules
+## Operating rules
 
 - Prefer deterministic health/status checks before action.
 - Keep services VPS-local unless an explicit secured exposure plan exists.
@@ -28,3 +28,7 @@ Use Ralleh MCP when installing, upgrading, backing up, health-checking, or troub
 - [`INSTALL.md`](INSTALL.md) — install, configure, upgrade, and verify.
 - [`DOCTOR.md`](DOCTOR.md) — troubleshoot failures and unsafe states.
 - [`PROMPTS.md`](PROMPTS.md) — safe prompt examples.
+
+## Golden operating rule
+
+Keep Ralleh MCP VPS-local by default, verify backups and health before service changes, preserve no-checkout/no-booking/no-PII boundaries, and report degraded runtime/source status honestly.

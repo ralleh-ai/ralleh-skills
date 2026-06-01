@@ -21,8 +21,8 @@ Stop before public exposure changes, disabling TLS, changing admin/private route
 ```bash
 caddy validate --config /etc/caddy/Caddyfile
 systemctl status caddy --no-pager
-curl -I http://example.com
-curl -I https://example.com
+curl -I http://<approved-hostname>
+curl -I https://<approved-hostname>
 journalctl -u caddy -n 100 --no-pager
 ```
 

@@ -24,8 +24,8 @@ Run the approved checks for the deployment. Common checks include:
 ```bash
 ralleh-provision discover <manifest>
 ralleh-provision verify <manifest>
-dig +short example.com
-curl -I https://example.com
+dig +short <approved-hostname>
+curl -I https://<approved-hostname>
 ```
 
 ## Verification gate

@@ -5,6 +5,7 @@ Ralleh skills are organized by capability family. Each skill is a Markdown runbo
 ## Families
 
 - [`Foundation`](Foundation/) — operating protocol, navigation, safety.
+- [`Agents`](Agents/) — agent file standards and audits.
 - [`Communication`](Communication/) — agent/session/user communication patterns.
 - [`Engineering`](Engineering/) — git, implementation, verification standards.
 - [`Automation`](Automation/) — browser and controlled external-system workflows.

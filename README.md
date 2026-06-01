@@ -8,6 +8,7 @@ Each skill is a self-contained Markdown guide that an agent can read from a repo
 
 - [`pages/onboarding/README.md`](pages/onboarding/README.md) — the first 10 instructions a bot should read when onboarding into a Ralleh-managed environment.
 - [`skills/README.md`](skills/README.md) — skill library map by family.
+- [`agents/README.md`](agents/README.md) — golden standards for agent Markdown files.
 
 ## Organization
 
@@ -16,6 +17,7 @@ pages/                       # curated multi-instruction pages
   onboarding/README.md       # bot onboarding page
 skills/
   Foundation/<Skill>/        # operating rules, navigation, safety
+  Agents/<Skill>/            # agent file standards and audits
   Communication/<Skill>/     # agent/session/user communication patterns
   Engineering/<Skill>/       # git, implementation, verification
   Automation/<Skill>/        # browser and controlled external-system workflows
@@ -40,6 +42,7 @@ Naming and golden-content rules are enforced by [`docs/NAMING_STANDARD.md`](docs
 - [OpenClaw A2A Skill](skills/Communication/OpenClawA2A/README.md) — safe agent-to-agent routing and handoffs.
 - [Prompt Defense Skill](skills/Security/PromptDefense/README.md) — prompt-injection and trust-boundary defense.
 - [Diagram Maker Skill](skills/Visualization/DiagramMaker/README.md) — verified SVG/HTML or Excalidraw diagram artifacts.
+- [Agent File Standards Skill](skills/Agents/AgentFileStandards/README.md) — audit and optimize SOUL, TOOLS, AGENTS, MEMORY, USER, and PATTERNS files.
 - [Talk Voice Skill](skills/Voice/TalkVoice/README.md) — safe conversational voice interaction.
 - [Phone Control Skill](skills/Voice/PhoneControl/README.md) — permission-first paired phone/device control.
 - [Voice Stream Skill](skills/Voice/VoiceStream/README.md) — realtime voice stream lifecycle and guardrails.

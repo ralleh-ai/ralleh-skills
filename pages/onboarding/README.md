@@ -24,6 +24,16 @@ Use this page when onboarding a bot into a Ralleh-managed environment. It is an 
 9. [`Tool Installation Support Pattern`](../../skills/Operations/ToolInstallationSupportPattern/README.md)
 10. [`Troubleshooting Runbook`](../../skills/Operations/TroubleshootingRunbook/README.md)
 
+## Conditional agent-file standards
+
+Read this when the bot will create, audit, or optimize agent Markdown files:
+
+- [`Agent File Standards`](../../skills/Agents/AgentFileStandards/README.md) — overview of agent-file audits and optimization.
+- [`Agent Standards Index`](../../agents/README.md) — definitions for SOUL, TOOLS, AGENTS, MEMORY, USER, and PATTERNS.
+- [`Agent File Audit`](../../agents/Evaluation/AgentFileAudit.md) — audit procedure and verdict format.
+
+Use the specific definition file under `agents/Definitions/` for the target file type.
+
 ## Conditional voice skills
 
 Read these when the bot will handle voice, phone, live audio, transcription, or spoken output:

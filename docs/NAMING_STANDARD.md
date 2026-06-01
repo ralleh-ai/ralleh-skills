@@ -8,6 +8,17 @@ Keep the skill repository predictable for humans and bots. A bot should be able 
 
 ```text
 README.md
+agents/
+  README.md
+  Definitions/
+    SOUL.md
+    TOOLS.md
+    AGENTS.md
+    MEMORY.md
+    USER.md
+    PATTERNS.md
+  Evaluation/
+    AgentFileAudit.md
 docs/
   NAMING_STANDARD.md
   GOLDEN_CONTENT_STANDARD.md
@@ -29,7 +40,7 @@ scripts/
 
 ## Folder names
 
-- Root management folders are lowercase: `docs`, `pages`, `scripts`, `skills`.
+- Root management folders are lowercase: `agents`, `docs`, `pages`, `scripts`, `skills`.
 - Page folders use lowercase kebab-case: `onboarding`, `new-agent`, `memory-stack`.
 - Skill family folders use PascalCase: `Foundation`, `Engineering`, `Memory`, `Operations`.
 - Skill folders use PascalCase with no spaces, underscores, or hyphens: `Engram`, `RecallWorkflow`, `GitRepoDiscipline`.

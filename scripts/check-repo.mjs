@@ -10,7 +10,7 @@ const isFile = (p) => exists(p) && fs.statSync(path.join(root, p)).isFile();
 const pascal = /^[A-Z][A-Za-z0-9]*$/;
 const kebab = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const companion = new Set(['README.md', 'INSTALL.md', 'DOCTOR.md', 'PROMPTS.md']);
-const allowedRootDirs = new Set(['.git', 'docs', 'pages', 'scripts', 'skills']);
+const allowedRootDirs = new Set(['.git', 'agents', 'docs', 'pages', 'scripts', 'skills']);
 const forbiddenDirs = new Set(['bundle', 'bundles', 'template', 'templates', 'tmp', 'temp', 'scratch', 'drafts', 'archive']);
 const forbiddenFilePatterns = [
   /(^|\/)TODO\.md$/i,

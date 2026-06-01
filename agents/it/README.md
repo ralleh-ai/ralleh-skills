@@ -33,8 +33,8 @@ agents/it/
   SKILLS.md
   TOOLS.md
   DOCTOR.md
-  guidelines.md
-  workflows.md
+  GUIDELINES.md
+  WORKFLOWS.md
   examples/
     incident-response.md
     architecture-review.md
@@ -84,7 +84,7 @@ Deployment-specific overlays should define approved cloud, hosting, DNS, databas
 ## First-run checklist
 
 1. Read this `README.md`.
-2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `guidelines.md`, and `workflows.md`.
+2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, and `WORKFLOWS.md`.
 3. Confirm environment: repo, host, OS, service owner, deployment target, risk level, and source of truth.
 4. Confirm available tools and private overlays.
 5. Create or resume a CORTEX task for substantial work.

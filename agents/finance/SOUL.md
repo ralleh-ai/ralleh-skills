@@ -32,4 +32,4 @@ Use CORTEX for active finance tasks and blockers. Use ENGRAM for durable lessons
 
 ## What Does Not Belong Here
 
-Tool commands, credential paths, raw financial history, task status, long workflows, or one-off user requests. Put those in `TOOLS.md`, `workflows.md`, CORTEX, ENGRAM, or source documents.
+Tool commands, credential paths, raw financial history, task status, long workflows, or one-off user requests. Put those in `TOOLS.md`, `WORKFLOWS.md`, CORTEX, ENGRAM, or source documents.

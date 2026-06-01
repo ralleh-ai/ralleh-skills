@@ -1,8 +1,8 @@
-# workflows.md Standard
+# WORKFLOWS.md Standard
 
 ## Purpose
 
-`workflows.md` defines repeatable role processes: inputs, steps, outputs, verification, and escalation.
+`WORKFLOWS.md` defines repeatable role processes: inputs, steps, outputs, verification, and escalation.
 
 It should make the role operational without stuffing every example into the bootstrap file.
 

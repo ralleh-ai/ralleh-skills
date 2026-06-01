@@ -71,7 +71,7 @@ if (isDir('pages')) {
 
 if (isDir('agents')) {
   const ignoredAgentDirs = new Set(['Definitions', 'Evaluation']);
-  const requiredRoleFiles = ['README.md', 'SOUL.md', 'IDENTITY.md', 'AGENTS.md', 'SKILLS.md', 'workflows.md', 'guidelines.md', 'DOCTOR.md'];
+  const requiredRoleFiles = ['README.md', 'SOUL.md', 'IDENTITY.md', 'AGENTS.md', 'SKILLS.md', 'WORKFLOWS.md', 'GUIDELINES.md', 'DOCTOR.md'];
   for (const name of fs.readdirSync(path.join(root, 'agents'))) {
     const roleRel = `agents/${name}`;
     if (!isDir(roleRel) || ignoredAgentDirs.has(name)) continue;

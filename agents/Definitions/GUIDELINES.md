@@ -1,8 +1,8 @@
-# guidelines.md Standard
+# GUIDELINES.md Standard
 
 ## Purpose
 
-`guidelines.md` defines role-specific rules, best practices, conventions, and quality bars.
+`GUIDELINES.md` defines role-specific rules, best practices, conventions, and quality bars.
 
 It should be stable guidance that improves judgment and output quality.
 
@@ -23,7 +23,7 @@ It should be stable guidance that improves judgment and output quality.
 ## Optimization rules
 
 - Prefer durable rules over examples.
-- Put process steps in `workflows.md`.
+- Put process steps in `WORKFLOWS.md`.
 - Put examples in `examples/`.
 - Keep rules testable.
 

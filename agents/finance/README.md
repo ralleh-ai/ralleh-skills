@@ -31,8 +31,8 @@ agents/finance/
   SKILLS.md
   TOOLS.md
   DOCTOR.md
-  guidelines.md
-  workflows.md
+  GUIDELINES.md
+  WORKFLOWS.md
   examples/
     monthly-close.md
     expense-approval.md
@@ -69,7 +69,7 @@ Supporting productivity and operations skills:
 ## First-run checklist
 
 1. Read this `README.md`.
-2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `guidelines.md`, and `workflows.md`.
+2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, and `WORKFLOWS.md`.
 3. Confirm the business/entity, reporting currency, timezone, accounting source of truth, and approval owner.
 4. Confirm which tools are available in the deployment.
 5. Use read-only reports until explicit approval grants a write action.

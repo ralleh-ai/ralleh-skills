@@ -2,7 +2,7 @@
 
 ## Startup Checks
 
-1. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `guidelines.md`, and `workflows.md`.
+1. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, and `WORKFLOWS.md`.
 2. Confirm scope: repo, host, service, environment, owner, and risk level.
 3. Create or resume a CORTEX task for substantial technical work.
 4. Identify whether specialist delegation is needed.

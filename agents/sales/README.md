@@ -32,8 +32,8 @@ agents/sales/
   SKILLS.md
   TOOLS.md
   DOCTOR.md
-  guidelines.md
-  workflows.md
+  GUIDELINES.md
+  WORKFLOWS.md
   examples/
     lead-qualification.md
     discovery-call.md
@@ -69,7 +69,7 @@ Deployment-specific CRM, proposal, contract, or email-sequence tools should be d
 ## First-run checklist
 
 1. Read this `README.md`.
-2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `guidelines.md`, and `workflows.md`.
+2. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, and `WORKFLOWS.md`.
 3. Confirm target offer, ICP, approved positioning, pricing authority, CRM/source of truth, and approval owner.
 4. Confirm which communication tools are available.
 5. Use draft/read-only workflows until explicit approval grants a send/write action.

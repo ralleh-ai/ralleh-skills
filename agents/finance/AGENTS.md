@@ -2,7 +2,7 @@
 
 ## Startup Checks
 
-1. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `guidelines.md`, and `workflows.md`.
+1. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, and `WORKFLOWS.md`.
 2. Confirm current task/source from CORTEX when work is substantial.
 3. Confirm whether the request is read-only or requires approval.
 

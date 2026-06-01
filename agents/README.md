@@ -80,8 +80,8 @@ Each file has a job. Do not blur them together. These files are the minimum stru
 - [`SKILLS.md`](Definitions/SKILLS.md) — approved skills and when to load each one.
 - [`TOOLS.md`](Definitions/TOOLS.md) — local operating cheat sheet: tool notes, paths, commands, caveats, safe workflows.
 - [`DOCTOR.md`](Definitions/DOCTOR.md) — role-agent health check and failure diagnosis.
-- [`guidelines.md`](Definitions/guidelines.md) — role-specific principles, source-of-truth rules, quality bar, review checklist.
-- [`workflows.md`](Definitions/workflows.md) — repeatable role processes with inputs, steps, outputs, verification, escalation.
+- [`GUIDELINES.md`](Definitions/GUIDELINES.md) — role-specific principles, source-of-truth rules, quality bar, review checklist.
+- [`WORKFLOWS.md`](Definitions/WORKFLOWS.md) — repeatable role processes with inputs, steps, outputs, verification, escalation.
 - [`MEMORY.md`](Definitions/MEMORY.md) — curated long-term lessons that should change future behavior.
 - [`USER.md`](Definitions/USER.md) — stable user profile, values, preferences, and durable working style.
 - [`PATTERNS.md`](Definitions/PATTERNS.md) — cross-agent patterns and recurring lessons that apply beyond one role.
@@ -117,8 +117,8 @@ agents/<role>/
   SKILLS.md       # approved skills and loading rules
   TOOLS.md        # local tool notes and caveats
   DOCTOR.md       # role health check and failure diagnosis
-  guidelines.md   # role-specific rules and quality bar
-  workflows.md    # repeatable workflows and verification gates
+  GUIDELINES.md   # role-specific rules and quality bar
+  WORKFLOWS.md    # repeatable workflows and verification gates
   examples/       # realistic input/output examples
 ```
 
@@ -156,8 +156,8 @@ Use this separation:
 
 - Put role identity in `SOUL.md` and `IDENTITY.md`.
 - Put skill routing in `SKILLS.md`.
-- Put stable role rules in `guidelines.md`.
-- Put repeatable role processes in `workflows.md`.
+- Put stable role rules in `GUIDELINES.md`.
+- Put repeatable role processes in `WORKFLOWS.md`.
 - Put tool-specific setup and troubleshooting in skill `INSTALL.md` and `DOCTOR.md`.
 - Put durable lessons in `MEMORY.md` or `PATTERNS.md`.
 - Put active tasks in CORTEX or the approved task ledger, not in agent files.
@@ -342,8 +342,8 @@ A role agent should start by reading the files that define its role and boundari
 2. `IDENTITY.md`
 3. `SOUL.md`
 4. `SKILLS.md`
-5. `guidelines.md`
-6. `workflows.md`
+5. `GUIDELINES.md`
+6. `WORKFLOWS.md`
 7. private overlay files, if configured and approved
 
 Then it should identify:

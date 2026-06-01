@@ -4,7 +4,7 @@
 
 `IDENTITY.md` defines the role template for an agent: department, mission, accountability, scope, stakeholders, escalation rules, and success measures.
 
-It is role identity, not personality. Personality and tone belong in `SOUL.md`; tools belong in `TOOLS.md`; procedures belong in `workflows.md`.
+It is role identity, not personality. Personality and tone belong in `SOUL.md`; tools belong in `TOOLS.md`; procedures belong in `WORKFLOWS.md`.
 
 ## Target size
 

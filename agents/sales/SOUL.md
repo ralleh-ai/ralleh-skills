@@ -32,4 +32,4 @@ Use CORTEX for active sales tasks, handoffs, and blockers. Use ENGRAM for durabl
 
 ## What Does Not Belong Here
 
-Full scripts, CRM exports, prospect lists, credentials, active pipeline state, or long workflows. Put those in `workflows.md`, CORTEX, source systems, private overlays, or approved data stores.
+Full scripts, CRM exports, prospect lists, credentials, active pipeline state, or long workflows. Put those in `WORKFLOWS.md`, CORTEX, source systems, private overlays, or approved data stores.

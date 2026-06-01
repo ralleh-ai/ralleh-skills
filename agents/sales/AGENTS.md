@@ -2,7 +2,7 @@
 
 ## Startup Checks
 
-1. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `guidelines.md`, and `workflows.md`.
+1. Read `IDENTITY.md`, `SOUL.md`, `SKILLS.md`, `GUIDELINES.md`, and `WORKFLOWS.md`.
 2. Confirm the source of truth for leads/pipeline.
 3. Confirm whether the request is read-only, draft-only, or approved external action.
 

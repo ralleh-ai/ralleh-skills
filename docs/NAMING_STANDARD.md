@@ -17,8 +17,8 @@ agents/
     SKILLS.md
     TOOLS.md
     DOCTOR.md
-    guidelines.md
-    workflows.md
+    GUIDELINES.md
+    WORKFLOWS.md
     MEMORY.md
     USER.md
     PATTERNS.md
@@ -32,8 +32,8 @@ agents/
     SKILLS.md
     TOOLS.md
     DOCTOR.md
-    guidelines.md
-    workflows.md
+    GUIDELINES.md
+    WORKFLOWS.md
     examples/
 docs/
   NAMING_STANDARD.md

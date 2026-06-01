@@ -9,6 +9,7 @@ Ralleh skills are organized by capability family. Each skill is a Markdown runbo
 - [`Communication`](Communication/) — agent/session/user communication patterns.
 - [`Engineering`](Engineering/) — git, implementation, verification standards.
 - [`Infrastructure`](Infrastructure/) — VPS, networking, web serving, backups, runtime.
+- [`Knowledge`](Knowledge/) — curated content/news/research lookup and consensus workflows.
 - [`Data`](Data/) — databases, vector stores, caches.
 - [`Automation`](Automation/) — browser and controlled external-system workflows.
 - [`Observability`](Observability/) — cost, context, health, and usage diagnostics.

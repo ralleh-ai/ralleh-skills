@@ -129,6 +129,10 @@ This public repo contains golden reusable instructions. Customer-specific hosts,
 - [`HostingerVps`](skills/Infrastructure/HostingerVps/README.md) — Hostinger VPS/DNS discovery and verification.
 - [`RallehMcp`](skills/Infrastructure/RallehMcp/README.md) — install, upgrade, backup, health-check, and run the VPS-local Ralleh MCP runtime.
 
+### Knowledge
+
+- [`RallehMcpSearch`](skills/Knowledge/RallehMcpSearch/README.md) — curated content/news/research lookup, consensus, and conflict detection without arbitrary crawling.
+
 ### Marketing
 
 - [`GoogleAds`](skills/Marketing/GoogleAds/README.md) — read-first ad campaign reporting and approved change planning.

@@ -9,6 +9,6 @@ Ralleh skills are organized by capability family. Each skill is a Markdown runbo
 - [`Memory`](Memory/) — durable memory, recall, consolidation.
 - [`Operations`](Operations/) — handoffs, installation support, troubleshooting.
 
-## Bundles
+## Pages
 
-Bundles are ordered reading lists for a role or scenario. Start with [`bundles/onboarding/README.md`](../bundles/onboarding/README.md).
+Pages can point a bot to multiple golden instructions for a role or scenario. Start with [`pages/onboarding/README.md`](../pages/onboarding/README.md).

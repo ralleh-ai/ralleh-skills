@@ -6,14 +6,14 @@ Each skill is a self-contained Markdown guide that an agent can read from a repo
 
 ## Start here
 
-- [`bundles/onboarding/README.md`](bundles/onboarding/README.md) — the first 10 instructions a bot should read when onboarding into a Ralleh-managed environment.
+- [`pages/onboarding/README.md`](pages/onboarding/README.md) — the first 10 instructions a bot should read when onboarding into a Ralleh-managed environment.
 - [`skills/README.md`](skills/README.md) — skill library map by family.
 
 ## Organization
 
 ```text
-bundles/                     # ordered reading lists
-  onboarding/README.md       # bot onboarding package
+pages/                       # curated multi-instruction pages
+  onboarding/README.md       # bot onboarding page
 skills/
   Foundation/<Skill>/        # operating rules, navigation, safety
   Engineering/<Skill>/       # git, implementation, verification
@@ -22,7 +22,7 @@ skills/
 templates/                   # authoring templates
 ```
 
-Naming is enforced by [`docs/NAMING_STANDARD.md`](docs/NAMING_STANDARD.md) and [`scripts/check-names.mjs`](scripts/check-names.mjs).
+Naming and golden-content rules are enforced by [`docs/NAMING_STANDARD.md`](docs/NAMING_STANDARD.md), [`docs/GOLDEN_CONTENT_STANDARD.md`](docs/GOLDEN_CONTENT_STANDARD.md), and [`scripts/check-repo.mjs`](scripts/check-repo.mjs).
 
 ## Canonical skill examples
 
@@ -37,6 +37,4 @@ Naming is enforced by [`docs/NAMING_STANDARD.md`](docs/NAMING_STANDARD.md) and [
 
 ## Skill authoring standard
 
-Use [`templates/SKILL_TEMPLATE.md`](templates/SKILL_TEMPLATE.md) for individual skills and [`templates/BUNDLE_TEMPLATE.md`](templates/BUNDLE_TEMPLATE.md) for bundles.
-
-Public repo rule: include reusable instructions only. Put customer-specific hosts, private URLs, credentials, and internal runbooks in `ralleh-skills-private`.
+Public repo rule: include golden reusable instructions only. Put customer-specific hosts, private URLs, credentials, and internal runbooks in `ralleh-skills-private`.

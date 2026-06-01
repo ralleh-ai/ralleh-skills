@@ -9,23 +9,62 @@ const isDir = (p) => exists(p) && fs.statSync(path.join(root, p)).isDirectory();
 const isFile = (p) => exists(p) && fs.statSync(path.join(root, p)).isFile();
 const pascal = /^[A-Z][A-Za-z0-9]*$/;
 const kebab = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const template = /^[A-Z0-9_]+_TEMPLATE\.md$/;
 const companion = new Set(['README.md', 'INSTALL.md', 'DOCTOR.md', 'PROMPTS.md']);
+const allowedRootDirs = new Set(['.git', 'docs', 'pages', 'scripts', 'skills']);
+const forbiddenDirs = new Set(['bundle', 'bundles', 'template', 'templates', 'tmp', 'temp', 'scratch', 'drafts', 'archive']);
+const forbiddenFilePatterns = [
+  /(^|\/)TODO\.md$/i,
+  /(^|\/)DRAFT/i,
+  /(^|\/)SCRATCH/i,
+  /(^|\/)TEMP/i,
+  /\.tmp$/i,
+  /\.bak$/i,
+];
+const unsafeText = [
+  /ignore (all )?(previous|prior) instructions/i,
+  /do anything/i,
+  /no questions asked/i,
+  /delete .* without (asking|approval)/i,
+  /always run/i,
+  /curl .*\|\s*(sh|bash)/i,
+];
 
-for (const required of ['README.md', 'bundles/README.md', 'skills/README.md', 'docs/NAMING_STANDARD.md']) {
+for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
+  if (entry.isDirectory() && !allowedRootDirs.has(entry.name)) errors.push(`unsupported root folder: ${entry.name}`);
+}
+
+for (const required of ['README.md', 'docs/NAMING_STANDARD.md', 'docs/GOLDEN_CONTENT_STANDARD.md', 'skills/README.md']) {
   if (!isFile(required)) errors.push(`missing required file: ${required}`);
 }
 
-if (isDir('bundles')) {
-  for (const name of fs.readdirSync(path.join(root, 'bundles'))) {
-    const rel = `bundles/${name}`;
-    if (name === 'README.md') continue;
-    if (!isDir(rel)) continue;
-    if (!kebab.test(name)) errors.push(`bundle folder must be lowercase kebab-case: ${rel}`);
-    if (!isFile(`${rel}/README.md`)) errors.push(`bundle missing README.md: ${rel}`);
-    for (const child of fs.readdirSync(path.join(root, rel))) {
-      if (child.endsWith('.md') && child !== 'README.md') errors.push(`bundle markdown must be README.md only: ${rel}/${child}`);
+function walk(dir) {
+  const out = [];
+  for (const entry of fs.readdirSync(path.join(root, dir), { withFileTypes: true })) {
+    if (entry.name === '.git') continue;
+    const rel = path.join(dir, entry.name).replace(/^\.\//, '');
+    if (entry.isDirectory()) out.push(rel, ...walk(rel));
+    else out.push(rel);
+  }
+  return out;
+}
+
+for (const rel of walk('.')) {
+  const base = path.basename(rel);
+  if (fs.statSync(path.join(root, rel)).isDirectory()) {
+    if (forbiddenDirs.has(base.toLowerCase())) errors.push(`forbidden temp/non-golden folder: ${rel}`);
+  } else {
+    for (const pattern of forbiddenFilePatterns) {
+      if (pattern.test(rel)) errors.push(`forbidden temp/draft file: ${rel}`);
     }
+  }
+}
+
+if (isDir('pages')) {
+  for (const name of fs.readdirSync(path.join(root, 'pages'))) {
+    const rel = `pages/${name}`;
+    if (!isDir(rel)) continue;
+    if (!kebab.test(name)) errors.push(`page folder must be lowercase kebab-case: ${rel}`);
+    if (!isFile(`${rel}/README.md`)) errors.push(`page missing README.md: ${rel}`);
   }
 }
 
@@ -57,35 +96,18 @@ if (isDir('skills')) {
   }
 }
 
-if (isDir('templates')) {
-  for (const name of fs.readdirSync(path.join(root, 'templates'))) {
-    const rel = `templates/${name}`;
-    if (isFile(rel) && name.endsWith('.md') && !template.test(name)) {
-      errors.push(`template markdown must match SCREAMING_SNAKE_TEMPLATE.md: ${rel}`);
-    }
-  }
-}
-
-function walk(dir) {
-  const out = [];
-  for (const entry of fs.readdirSync(path.join(root, dir), { withFileTypes: true })) {
-    if (entry.name === '.git') continue;
-    const rel = path.join(dir, entry.name);
-    if (entry.isDirectory()) out.push(...walk(rel));
-    else out.push(rel);
-  }
-  return out;
-}
-
 for (const md of walk('.').filter((p) => p.endsWith('.md'))) {
   const text = fs.readFileSync(path.join(root, md), 'utf8');
-  const re = /\[[^\]]+\]\((?!https?:\/\/|mailto:|#)([^)]+)\)/g;
+  const linkRe = /\[[^\]]+\]\((?!https?:\/\/|mailto:|#)([^)]+)\)/g;
   let match;
-  while ((match = re.exec(text))) {
+  while ((match = linkRe.exec(text))) {
     const target = match[1].split('#', 1)[0];
     if (!target) continue;
     const resolved = path.resolve(root, path.dirname(md), target);
     if (!fs.existsSync(resolved)) errors.push(`broken markdown link in ${md}: ${match[1]}`);
+  }
+  for (const pattern of unsafeText) {
+    if (pattern.test(text)) errors.push(`unsafe/open-ended prompt language in ${md}: ${pattern}`);
   }
 }
 
@@ -94,4 +116,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('Naming standard OK');
+console.log('Repo standard OK');

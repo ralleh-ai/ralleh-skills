@@ -8,9 +8,11 @@ Keep the skill repository predictable for humans and bots. A bot should be able 
 
 ```text
 README.md
-bundles/
-  README.md
-  <bundle-slug>/
+docs/
+  NAMING_STANDARD.md
+  GOLDEN_CONTENT_STANDARD.md
+pages/
+  <page-slug>/
     README.md
 skills/
   README.md
@@ -21,16 +23,14 @@ skills/
       INSTALL.md      # optional
       DOCTOR.md       # optional
       PROMPTS.md      # optional
-templates/
-  *_TEMPLATE.md
 scripts/
-  check-names.mjs
+  check-repo.mjs
 ```
 
 ## Folder names
 
-- Root management folders are lowercase: `bundles`, `docs`, `scripts`, `skills`, `templates`.
-- Bundle folders use lowercase kebab-case: `onboarding`, `new-agent`, `memory-stack`.
+- Root management folders are lowercase: `docs`, `pages`, `scripts`, `skills`.
+- Page folders use lowercase kebab-case: `onboarding`, `new-agent`, `memory-stack`.
 - Skill family folders use PascalCase: `Foundation`, `Engineering`, `Memory`, `Operations`.
 - Skill folders use PascalCase with no spaces, underscores, or hyphens: `Engram`, `RecallWorkflow`, `GitRepoDiscipline`.
 
@@ -41,7 +41,6 @@ scripts/
   - `INSTALL.md` — install/configure/verify/operate.
   - `DOCTOR.md` — troubleshooting and health checks.
   - `PROMPTS.md` — user-facing prompt suggestions.
-- Templates use `SCREAMING_SNAKE_TEMPLATE.md`.
 - No loose skill instruction files are allowed directly under a family folder. Put each skill in its own folder.
 
 ## Enforcement
@@ -49,7 +48,7 @@ scripts/
 Run this before committing:
 
 ```bash
-node scripts/check-names.mjs
+node scripts/check-repo.mjs
 ```
 
-The check fails on non-standard folders, loose family-level skill files, missing skill `README.md` files, and broken local Markdown links.
+The check fails on non-standard folders, loose family-level skill files, missing `README.md` entrypoints, broken local Markdown links, unsupported temp folders, and unsafe placeholder language.

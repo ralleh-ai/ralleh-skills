@@ -22,6 +22,7 @@ skills/
   Observability/<Skill>/     # cost, context, health, and usage diagnostics
   Security/<Skill>/          # prompt, secret, and trust-boundary defenses
   Visualization/<Skill>/     # diagrams, architecture maps, visual artifacts
+  Voice/<Skill>/             # voice, phone, STT, streams, and TTS
   Memory/<Skill>/            # ENGRAM and recall workflows
   TaskManagement/<Skill>/    # CORTEX and operational task ledgers
   Operations/<Skill>/        # handoffs, installation support, troubleshooting
@@ -39,6 +40,11 @@ Naming and golden-content rules are enforced by [`docs/NAMING_STANDARD.md`](docs
 - [OpenClaw A2A Skill](skills/Communication/OpenClawA2A/README.md) — safe agent-to-agent routing and handoffs.
 - [Prompt Defense Skill](skills/Security/PromptDefense/README.md) — prompt-injection and trust-boundary defense.
 - [Diagram Maker Skill](skills/Visualization/DiagramMaker/README.md) — verified SVG/HTML or Excalidraw diagram artifacts.
+- [Talk Voice Skill](skills/Voice/TalkVoice/README.md) — safe conversational voice interaction.
+- [Phone Control Skill](skills/Voice/PhoneControl/README.md) — permission-first paired phone/device control.
+- [Voice Stream Skill](skills/Voice/VoiceStream/README.md) — realtime voice stream lifecycle and guardrails.
+- [Whisper STT Skill](skills/Voice/WhisperStt/README.md) — speech-to-text transcription.
+- [TTS ElevenLabs Skill](skills/Voice/TtsElevenLabs/README.md) — cloud TTS with ElevenLabs or approved Cartesia overlay.
 
 ## How agents should use this repo
 

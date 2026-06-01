@@ -24,6 +24,18 @@ Use this page when onboarding a bot into a Ralleh-managed environment. It is an 
 9. [`Tool Installation Support Pattern`](../../skills/Operations/ToolInstallationSupportPattern/README.md)
 10. [`Troubleshooting Runbook`](../../skills/Operations/TroubleshootingRunbook/README.md)
 
+## Conditional voice skills
+
+Read these when the bot will handle voice, phone, live audio, transcription, or spoken output:
+
+- [`Talk Voice`](../../skills/Voice/TalkVoice/README.md) — voice conversation overview and guardrails.
+- [`Phone Control`](../../skills/Voice/PhoneControl/README.md) — paired phone/device control boundaries.
+- [`Voice Stream`](../../skills/Voice/VoiceStream/README.md) — realtime voice session lifecycle.
+- [`Whisper STT`](../../skills/Voice/WhisperStt/README.md) — speech-to-text transcription.
+- [`TTS ElevenLabs`](../../skills/Voice/TtsElevenLabs/README.md) — cloud text-to-speech with provider safety.
+
+Use each skill's `INSTALL.md`, `DOCTOR.md`, and `PROMPTS.md` only when installing, troubleshooting, or teaching that specific workflow.
+
 ## Conditional communication skill
 
 Read this when the bot will coordinate with other agents or sessions:

@@ -68,6 +68,26 @@ if (isDir('pages')) {
   }
 }
 
+
+if (isDir('agents')) {
+  const ignoredAgentDirs = new Set(['Definitions', 'Evaluation']);
+  const requiredRoleFiles = ['README.md', 'SOUL.md', 'IDENTITY.md', 'AGENTS.md', 'SKILLS.md', 'workflows.md', 'guidelines.md', 'DOCTOR.md'];
+  for (const name of fs.readdirSync(path.join(root, 'agents'))) {
+    const roleRel = `agents/${name}`;
+    if (!isDir(roleRel) || ignoredAgentDirs.has(name)) continue;
+    if (!kebab.test(name)) errors.push(`agent role folder must be lowercase kebab-case: ${roleRel}`);
+    for (const file of requiredRoleFiles) {
+      if (!isFile(`${roleRel}/${file}`)) errors.push(`agent role missing required file: ${roleRel}/${file}`);
+    }
+    if (!isDir(`${roleRel}/examples`)) {
+      errors.push(`agent role missing examples folder: ${roleRel}/examples`);
+    } else {
+      const examples = fs.readdirSync(path.join(root, roleRel, 'examples')).filter((f) => f.endsWith('.md'));
+      if (!examples.length) errors.push(`agent role examples folder has no markdown examples: ${roleRel}/examples`);
+    }
+  }
+}
+
 if (isDir('skills')) {
   for (const family of fs.readdirSync(path.join(root, 'skills'))) {
     const familyRel = `skills/${family}`;

@@ -12,13 +12,29 @@ agents/
   README.md
   Definitions/
     SOUL.md
-    TOOLS.md
+    IDENTITY.md
     AGENTS.md
+    SKILLS.md
+    TOOLS.md
+    DOCTOR.md
+    guidelines.md
+    workflows.md
     MEMORY.md
     USER.md
     PATTERNS.md
   Evaluation/
     AgentFileAudit.md
+  <role-slug>/
+    README.md
+    SOUL.md
+    IDENTITY.md
+    AGENTS.md
+    SKILLS.md
+    TOOLS.md
+    DOCTOR.md
+    guidelines.md
+    workflows.md
+    examples/
 docs/
   NAMING_STANDARD.md
   GOLDEN_CONTENT_STANDARD.md
@@ -43,6 +59,7 @@ scripts/
 ## Folder names
 
 - Root management folders are lowercase: `agents`, `docs`, `mcp`, `pages`, `scripts`, `skills`.
+- Agent role folders use lowercase kebab-case and must include the required role files plus an `examples/` folder.
 - Page folders use lowercase kebab-case: `onboarding`, `new-agent`, `memory-stack`.
 - Skill family folders use PascalCase: `Foundation`, `Engineering`, `Memory`, `Operations`.
 - Skill folders use PascalCase with no spaces, underscores, or hyphens: `Engram`, `RecallWorkflow`, `GitRepoDiscipline`.

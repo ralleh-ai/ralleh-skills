@@ -72,7 +72,7 @@ Keep public golden templates generic and reusable. Put customer-specific hosts, 
 
 ## The standard agent files
 
-Each file has a job. Do not blur them together.
+Each file has a job. Do not blur them together. These files are the minimum structure for a serious role agent, not optional decoration.
 
 - [`SOUL.md`](Definitions/SOUL.md) — who the agent is when it wakes up: identity, role, values, tone, boundaries, continuity.
 - [`IDENTITY.md`](Definitions/IDENTITY.md) — role mission, responsibilities, stakeholders, success measures, escalation.
@@ -87,6 +87,54 @@ Each file has a job. Do not blur them together.
 - [`PATTERNS.md`](Definitions/PATTERNS.md) — cross-agent patterns and recurring lessons that apply beyond one role.
 
 Use [`Evaluation/AgentFileAudit.md`](Evaluation/AgentFileAudit.md) to evaluate whether a current file is golden, usable, bloated, risky, or misplaced.
+
+## Definitions versus role folders
+
+`agents/Definitions/` is the canonical template standard. It defines what each file type means, required sections, target size, optimization rules, anti-patterns, and audit checks.
+
+Role folders such as `agents/finance/`, `agents/sales/`, and `agents/it/` are working role-agent baselines. They should not blindly copy the definition files. They should instantiate the standard for a specific department, with real role scope, skill routing, workflows, examples, and safety boundaries.
+
+Use this mental model:
+
+```text
+agents/Definitions/     = file-type standard and quality bar
+agents/<role>/          = production role-agent baseline
+agents/<role>/examples/ = realistic examples that teach output shape
+```
+
+Do not add a generic `agents/templates/` folder in this public repo unless the naming/governance standard changes. The existing `Definitions/` folder is the template authority, and role folders are the concrete examples. This avoids duplicated stale templates and keeps one source of truth.
+
+## Minimum role-agent folder
+
+A complete role folder should contain:
+
+```text
+agents/<role>/
+  README.md       # role overview and routing
+  SOUL.md         # identity, tone, principles, boundaries
+  IDENTITY.md     # mission, scope, responsibilities, success measures
+  AGENTS.md       # orchestration and handoff rules
+  SKILLS.md       # approved skills and loading rules
+  TOOLS.md        # local tool notes and caveats
+  DOCTOR.md       # role health check and failure diagnosis
+  guidelines.md   # role-specific rules and quality bar
+  workflows.md    # repeatable workflows and verification gates
+  examples/       # realistic input/output examples
+```
+
+If a role lacks these files, treat it as a draft role, not a golden agent.
+
+## Current implementation status
+
+The current public role-agent baselines are not empty shells. They include the core operating files and example folders.
+
+| Role | Core files | Examples | Status |
+| --- | --- | --- | --- |
+| [`finance`](finance/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, guidelines, workflows | monthly close, expense approval, budget forecast | Golden baseline |
+| [`sales`](sales/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, guidelines, workflows | lead qualification, discovery call, proposal follow-up | Golden baseline |
+| [`it`](it/README.md) | README, SOUL, IDENTITY, AGENTS, SKILLS, TOOLS, DOCTOR, guidelines, workflows | incident response, architecture review, deployment hardening, data migration | Golden baseline |
+
+Future likely role folders include `marketing`, `support`, `operations`, `procurement`, and `legal`, but they should be created only when there is a real recurring role, approved skill set, and enough workflow detail to make them useful.
 
 ## Relationship between agent files and skills
 
@@ -284,23 +332,7 @@ Create a new role agent when the work has durable ownership, recurring workflows
 
 Do not create an agent just because a task happened once. Use a skill, workflow, or CORTEX task instead.
 
-A new role template should include:
-
-```text
-agents/<role>/
-  README.md
-  SOUL.md
-  IDENTITY.md
-  AGENTS.md
-  SKILLS.md
-  TOOLS.md
-  DOCTOR.md
-  guidelines.md
-  workflows.md
-  examples/
-```
-
-The role folder name should be lowercase. The content should be public-safe, generic, and reusable unless it belongs in a private overlay.
+A new role template should include the complete minimum role-agent folder described above. The role folder name should be lowercase. The content should be public-safe, generic, and reusable unless it belongs in a private overlay.
 
 ## First-run protocol for a role agent
 

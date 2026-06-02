@@ -16,6 +16,7 @@ It exists to help bots choose the right capability quickly, load only the files 
 ## Available skills
 
 - [`PromptDefense`](PromptDefense/README.md) — identify and contain prompt injection, instruction conflicts, and untrusted-content attacks.
+- [`RallehVault`](RallehVault/README.md) — install, verify, and troubleshoot the standalone optional encrypted SecretRef vault.
 
 ## Selection rule
 

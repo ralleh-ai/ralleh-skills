@@ -17,6 +17,17 @@ Use this file to verify Hostinger VPS capability during VPS provisioning or oper
 - Client manifest with provider/domain fields.
 - Target hostname and expected public IPv4.
 
+## Install ralleh-provision from RALLEH source
+
+Use the canonical RALLEH provisioning repo:
+
+```bash
+git clone https://github.com/ralleh-ai/ralleh-provision.git ~/projects/ralleh-provision
+cd ~/projects/ralleh-provision
+go test ./...
+go build -o bin/ralleh-provision ./cmd/ralleh-provision
+```
+
 ## Verify capability
 
 Run the approved checks for the deployment. Common checks include:

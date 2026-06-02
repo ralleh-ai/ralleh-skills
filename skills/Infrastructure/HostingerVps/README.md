@@ -4,6 +4,8 @@
 
 Hostinger VPS is the hosting-provider skill for RALLEH provisioning targets: VPS discovery, DNS, instance metadata, Hostinger MCP/API boundaries, and post-provision verification.
 
+Current RALLEH provisioning source repository: `https://github.com/ralleh-ai/ralleh-provision`
+
 ## What Hostinger VPS does
 
 - Verifies VPS identity, IP, OS image, region/datacenter, and DNS records.

@@ -6,6 +6,8 @@ CORTEX is a local-first task operations ledger for AI-agent work. It gives bots,
 
 In a Ralleh environment, CORTEX governs current work while ENGRAM governs memory.
 
+Current RALLEH source repository: `https://github.com/ralleh-ai/cortex`
+
 - ENGRAM answers: “What do we remember?”
 - CORTEX answers: “What work exists, who owns it, what state is it in, and what evidence proves it is done?”
 

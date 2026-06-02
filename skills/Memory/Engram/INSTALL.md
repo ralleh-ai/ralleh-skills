@@ -24,9 +24,10 @@ Read [`README.md`](README.md) first for what ENGRAM is and when to use it. Use [
 
 ## Install
 
-Preferred install from an existing ENGRAM source checkout:
+Preferred install from the current RALLEH ENGRAM source checkout:
 
 ```bash
+git clone https://github.com/ralleh-ai/engram.git ~/projects/engram
 cd ~/projects/engram
 ./scripts/install.sh
 ```

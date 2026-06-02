@@ -4,7 +4,11 @@
 
 ENGRAM is a durable memory layer for bots and AI employees. It gives an agent a way to preserve useful context across sessions, search prior work semantically, and turn raw session notes into reusable project memory.
 
-In a Ralleh environment, ENGRAM is the long-term recall companion to the bot's live tools and local notes. It helps a bot answer questions like:
+In a Ralleh environment, ENGRAM is the long-term recall companion to the bot's live tools and local notes.
+
+Current RALLEH source repository: `https://github.com/ralleh-ai/engram`
+
+It helps a bot answer questions like:
 
 - What did we decide last time?
 - What broke before, and how did we fix it?

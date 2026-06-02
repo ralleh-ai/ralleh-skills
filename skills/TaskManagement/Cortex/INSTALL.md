@@ -29,10 +29,10 @@ Read [`README.md`](README.md) first for what CORTEX is and when to use it. Use [
 
 ## Install CLI from source
 
-Use the approved source URL for the deployment. Current public source:
+Use the approved source URL for the deployment. Current RALLEH source:
 
 ```bash
-git clone https://github.com/isbe-bot/cortex.git ~/projects/cortex
+git clone https://github.com/ralleh-ai/cortex.git ~/projects/cortex
 cd ~/projects/cortex
 npm install
 node db/init.js

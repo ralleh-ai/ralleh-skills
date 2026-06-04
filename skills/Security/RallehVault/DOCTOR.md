@@ -1,4 +1,4 @@
-# Ralleh Vault Doctor
+# Ralleh Keys Doctor
 
 Use this when `ralleh-vault` install, store access, key resolution, rotation, or check output is failing.
 

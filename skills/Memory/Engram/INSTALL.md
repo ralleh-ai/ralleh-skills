@@ -27,7 +27,7 @@ Read [`README.md`](README.md) first for what ENGRAM is and when to use it. Use [
 Preferred install from the current RALLEH ENGRAM source checkout:
 
 ```bash
-git clone https://github.com/ralleh-ai/engram.git ~/projects/engram
+git clone https://github.com/ralleh-ai/ralleh-memory.git ~/projects/engram
 cd ~/projects/engram
 ./scripts/install.sh
 ```

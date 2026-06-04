@@ -1,12 +1,12 @@
-# ENGRAM Memory Skill
+# Ralleh Memory (ENGRAM) Skill
 
-## What ENGRAM is
+## What Ralleh Memory is
 
-ENGRAM is a durable memory layer for bots and AI employees. It gives an agent a way to preserve useful context across sessions, search prior work semantically, and turn raw session notes into reusable project memory.
+Ralleh Memory is the public product name for ENGRAM, the durable memory layer for bots and AI employees. It gives an agent a way to preserve useful context across sessions, search prior work semantically, and turn raw session notes into reusable project memory.
 
-In a Ralleh environment, ENGRAM is the long-term recall companion to the bot's live tools and local notes.
+In a Ralleh environment, Ralleh Memory is the long-term recall companion to the bot's live tools and local notes.
 
-Current RALLEH source repository: `https://github.com/ralleh-ai/engram`
+Current RALLEH source repository: `https://github.com/ralleh-ai/ralleh-memory`
 
 It helps a bot answer questions like:
 
@@ -15,7 +15,7 @@ It helps a bot answer questions like:
 - What preferences, standards, and project facts should I remember?
 - What prior context should I load before acting?
 
-## What ENGRAM does
+## What Ralleh Memory does
 
 - Stores durable memory objects for decisions, lessons, project context, and operational notes.
 - Supports semantic search so bots can recall related memories, not just exact text matches.
@@ -25,9 +25,9 @@ It helps a bot answer questions like:
 
 ## When a bot should use it
 
-Use ENGRAM when the user asks about prior work, decisions, blockers, preferences, todos, project history, or recurring lessons. Also use it after meaningful work to preserve hard-won context for the next session.
+Use Ralleh Memory when the user asks about prior work, decisions, blockers, preferences, todos, project history, or recurring lessons. Also use it after meaningful work to preserve hard-won context for the next session.
 
-Do not use ENGRAM to store secrets, raw credentials, private keys, session cookies, or sensitive data that should not be recalled later.
+Do not use Ralleh Memory to store secrets, raw credentials, private keys, session cookies, or sensitive data that should not be recalled later.
 
 ## Files in this skill
 
@@ -37,15 +37,15 @@ Do not use ENGRAM to store secrets, raw credentials, private keys, session cooki
 
 ## Common workflows
 
-### Install ENGRAM
+### Install Ralleh Memory
 
 Read [`INSTALL.md`](INSTALL.md), then run the documented install/configure/verify flow. Do not claim success until the smoke test passes.
 
-### Troubleshoot ENGRAM
+### Troubleshoot Ralleh Memory
 
 Read [`DOCTOR.md`](DOCTOR.md), run the fast triage commands, then report status as healthy, degraded, down, or not installed.
 
-### Teach a user how to use ENGRAM
+### Teach a user how to use Ralleh Memory
 
 Read [`PROMPTS.md`](PROMPTS.md) and suggest natural prompts the user can send, such as asking the bot to recall project decisions, save a troubleshooting lesson, or run an ENGRAM health check.
 

@@ -1,4 +1,4 @@
-# Ralleh Vault Install Guide
+# Ralleh Keys Install Guide
 
 ## Safety
 
@@ -9,7 +9,7 @@
 ## Install from source
 
 ```bash
-git clone https://github.com/ralleh-ai/ralleh-vault.git ~/projects/ralleh-vault
+git clone https://github.com/ralleh-ai/ralleh-keys.git ~/projects/ralleh-keys
 cd ~/projects/ralleh-vault
 go test ./...
 go build -o bin/ralleh-vault ./cmd/ralleh-vault

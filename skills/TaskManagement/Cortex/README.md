@@ -1,17 +1,17 @@
-# CORTEX Task Management Skill
+# Ralleh Tasks (CORTEX) Task Management Skill
 
-## What CORTEX is
+## What Ralleh Tasks is
 
-CORTEX is a local-first task operations ledger for AI-agent work. It gives bots, operators, and dashboards a durable place to track active work, ownership, blockers, progress, lifecycle events, and completion evidence.
+Ralleh Tasks is the public product name for CORTEX, the local-first task operations ledger for AI-agent work. It gives bots, operators, and dashboards a durable place to track active work, ownership, blockers, progress, lifecycle events, and completion evidence.
 
-In a Ralleh environment, CORTEX governs current work while ENGRAM governs memory.
+In a Ralleh environment, Ralleh Tasks governs current work while Ralleh Memory governs memory.
 
-Current RALLEH source repository: `https://github.com/ralleh-ai/cortex`
+Current RALLEH source repository: `https://github.com/ralleh-ai/ralleh-tasks`
 
-- ENGRAM answers: “What do we remember?”
-- CORTEX answers: “What work exists, who owns it, what state is it in, and what evidence proves it is done?”
+- Ralleh Memory answers: “What do we remember?”
+- Ralleh Tasks answers: “What work exists, who owns it, what state is it in, and what evidence proves it is done?”
 
-## What CORTEX does
+## What Ralleh Tasks does
 
 - Stores tasks in a durable SQLite-backed ledger.
 - Tracks task status, assignee, project, priority, progress, step, blockers, input requests, failures, and completion notes.
@@ -22,9 +22,9 @@ Current RALLEH source repository: `https://github.com/ralleh-ai/cortex`
 
 ## When a bot should use it
 
-Use CORTEX for substantial work: implementation, debugging, deployment, publishing, multi-step research, subagent delegation, status tracking, or anything that may span sessions.
+Use Ralleh Tasks for substantial work: implementation, debugging, deployment, publishing, multi-step research, subagent delegation, status tracking, or anything that may span sessions.
 
-Skip CORTEX for tiny one-shot answers with no durable operational state.
+Skip Ralleh Tasks for tiny one-shot answers with no durable operational state.
 
 ## Files in this skill
 
@@ -34,15 +34,15 @@ Skip CORTEX for tiny one-shot answers with no durable operational state.
 
 ## Common workflows
 
-### Install CORTEX
+### Install Ralleh Tasks
 
 Read [`INSTALL.md`](INSTALL.md), then run the documented install/configure/verify flow. Do not claim success until `cortex status` or `node cortex.js status` succeeds.
 
-### Troubleshoot CORTEX
+### Troubleshoot Ralleh Tasks
 
 Read [`DOCTOR.md`](DOCTOR.md), run fast triage, and report whether CORTEX is healthy, degraded, down, or not installed.
 
-### Teach a user how to use CORTEX
+### Teach a user how to use Ralleh Tasks
 
 Read [`PROMPTS.md`](PROMPTS.md) and suggest natural prompts the user can send to capture work, ask for status, surface blockers, or close tasks with evidence.
 

@@ -18,7 +18,7 @@ Use this page when onboarding a bot into a Ralleh-managed environment. It is an 
 3. [`Safety and Approval Boundaries`](../../skills/Foundation/SafetyApprovalBoundaries/README.md)
 4. [`Git and Repo Discipline`](../../skills/Engineering/GitRepoDiscipline/README.md)
 5. [`Verification Before Done`](../../skills/Engineering/VerificationBeforeDone/README.md)
-6. [`ENGRAM Memory Skill`](../../skills/Memory/Engram/README.md)
+6. [`Ralleh Memory (ENGRAM) Skill`](../../skills/Memory/Engram/README.md)
 7. [`Memory Recall Workflow`](../../skills/Memory/RecallWorkflow/README.md)
 8. [`Task Handoff and Status Reporting`](../../skills/Operations/TaskHandoffStatusReporting/README.md)
 9. [`Tool Installation Support Pattern`](../../skills/Operations/ToolInstallationSupportPattern/README.md)
@@ -163,18 +163,18 @@ Read this when the bot will audit token usage, context bloat, cost, or expensive
 
 Read this when the bot will manage substantial work, subagents, blockers, or project status:
 
-- [`CORTEX Task Management`](../../skills/TaskManagement/Cortex/README.md) — overview of the operational task ledger.
-- [`CORTEX Install`](../../skills/TaskManagement/Cortex/INSTALL.md) — when installing/configuring CORTEX.
-- [`CORTEX Doctor`](../../skills/TaskManagement/Cortex/DOCTOR.md) — when CORTEX is broken or uncertain.
-- [`CORTEX Prompts`](../../skills/TaskManagement/Cortex/PROMPTS.md) — when teaching a user how to interact with task workflows.
+- [`Ralleh Tasks (CORTEX) Task Management`](../../skills/TaskManagement/Cortex/README.md) — overview of the operational task ledger.
+- [`Ralleh Tasks Install`](../../skills/TaskManagement/Cortex/INSTALL.md) — when installing/configuring Ralleh Tasks.
+- [`Ralleh Tasks Doctor`](../../skills/TaskManagement/Cortex/DOCTOR.md) — when Ralleh Tasks is broken or uncertain.
+- [`Ralleh Tasks Prompts`](../../skills/TaskManagement/Cortex/PROMPTS.md) — when teaching a user how to interact with task workflows.
 
-## Conditional ENGRAM companions
+## Conditional Ralleh Memory companions
 
 Only read these when relevant:
 
-- [`ENGRAM Install`](../../skills/Memory/Engram/INSTALL.md) — when installing/configuring ENGRAM.
-- [`ENGRAM Doctor`](../../skills/Memory/Engram/DOCTOR.md) — when ENGRAM is broken or uncertain.
-- [`ENGRAM Prompts`](../../skills/Memory/Engram/PROMPTS.md) — when teaching a user how to interact with memory features.
+- [`Ralleh Memory Install`](../../skills/Memory/Engram/INSTALL.md) — when installing/configuring Ralleh Memory.
+- [`Ralleh Memory Doctor`](../../skills/Memory/Engram/DOCTOR.md) — when Ralleh Memory is broken or uncertain.
+- [`Ralleh Memory Prompts`](../../skills/Memory/Engram/PROMPTS.md) — when teaching a user how to interact with memory features.
 
 ## Completion response
 

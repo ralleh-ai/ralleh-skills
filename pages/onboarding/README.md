@@ -96,11 +96,9 @@ Read this when the bot will create, audit, or optimize agent Markdown files:
 - [`Agent File Standards`](../../skills/Agents/AgentFileStandards/README.md) — overview of agent-file audits and optimization.
 - [`Agent Standards Index`](../../agents/README.md) — definitions for SOUL, TOOLS, AGENTS, MEMORY, USER, and PATTERNS.
 - [`Agent File Audit`](../../agents/Evaluation/AgentFileAudit.md) — audit procedure and verdict format.
-- [`Finance role agent template`](../../agents/finance/README.md) — baseline finance agent organization and behavior.
-- [`Sales role agent template`](../../agents/sales/README.md) — baseline sales agent organization and behavior.
-- [`IT role agent template`](../../agents/it/README.md) — baseline IT agent organization and behavior.
 
-Use the specific definition file under `agents/Definitions/` for the target file type.
+Role-agent packages such as IT, Sales, and Finance now live in `ralleh-agents`, not this repo.
+Use the specific definition file under `agents/Definitions/` for the target file type, and use `ralleh-agents` for role ownership and generated/custom agent composition.
 
 ## Conditional voice skills
 
